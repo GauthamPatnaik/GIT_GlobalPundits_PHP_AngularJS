@@ -1,0 +1,92 @@
+<div ng-controller="listingsController">
+    <div class="container-fluid grad-bg" id="top-block">
+        <div class="container">
+            <!-- <h2 class="bottom-aligned-text white-color">Careers</h2> -->
+        </div>
+    </div>
+
+        <div id="filterMobBtn">Filters</div>
+
+        <div id="content-area" class="">
+            <div id="filters-section" class="">
+
+                <input type="text" ng-model="search" ng-change="searchInit()" id="" placeholder="Keyword search.." style="color: #000000; border: 2px solid orange"/>
+                <br><br>
+
+                <span ng-click="activeJobs = []; activeCategories = []; activeLocations = []; initFilters()" ng-hide="activeJobs.length < 1 && activeCategories.length < 1 && activeLocations.length < 1" class="active" style="cursor: pointer">Clear filters<br><br></span>
+                
+                <p>Category Filter</p>
+                <ul id="catFilter">
+                    <li ng-repeat="x in categories1 | orderBy: 'name'" ng-click="selectFilter(x.name, activeCategories); reInitFilter('cat');" ng-class="{active : isActive(x.name, activeCategories)}">{{ x.name }}&nbsp;<span class="text-right">{{x.count}}</span></li>
+                </ul>
+                <p ng-show="showMoreButton(categories)" id="catFilterMore" class="text-center">See more</p>
+
+                <br>
+
+                <p>Job Filter</p>
+                <ul id="jobFilter">
+                    <li ng-repeat="x in jobs1 | orderBy: 'name'" ng-click="selectFilter(x.name, activeJobs); reInitFilter('job');" ng-class="{active : isActive(x.name, activeJobs)}">{{ x.name }}&nbsp;<span class="text-right">{{x.count}}</span></li>
+                </ul>
+                <p ng-show="showMoreButton(jobs)" id="jobFilterMore" class="text-center">See more</p>
+
+                <br>
+
+                <p>Location Filter</p>
+                <ul id="locFilter">
+                    <li ng-repeat="x in locations1 | orderBy: 'name'" ng-click="selectFilter(x.name, activeLocations); reInitFilter('loc');" ng-class="{active : isActive(x.name, activeLocations)}">{{ x.name }}&nbsp;<span class="text-right">{{x.count}}</span></li>
+                </ul>
+                <p ng-show="showMoreButton(locations)" id="locFilterMore" class="text-center">See more</p>
+            </div>
+
+            <div id="content-section" class="">    
+                <div id="cardStyle" class="not-mobile">
+                    View style - 
+                    <i class="material-icons" ng-click="cardStyle = 'col-lg-12'">view_stream</i>
+                    <i class="material-icons" ng-click="cardStyle = 'col-lg-4'">view_module</i>
+                </div>  
+                <div class="container">
+                    <h1 class="acc-color">Careers</h1>
+
+                    <h3 class="acc-color" ng-show="data == null">Fetching data, please wait...</h3>
+                    <h4 ng-show="search != ''" class="acc-color"><br>Searching for - '{{search}}'</h4>
+                    <h3 ng-show="filtered.length > 0" class="acc-color">Count - {{filtered.length}}</h3>
+
+                    <h4 ng-show="filtered.length == 0" class="">No job postings satisfy your filter condition, please try other filters</h4>
+                    
+                    <div class="row justify-content-left">                     
+
+                        <div ng-repeat="a in data | filter:jobFilter| filter:searchFilterFn as filtered" class="" ng-class="cardStyle">
+                            <!-- <div ng-repeat="a in data | limitTo:limit | filter:jobFilter| filter:searchFilterFn as filtered" class="" ng-class="cardStyle"> -->
+                             <!-- <a ui-sref="jobs({jobID: a.id+getIndex(a.id)})"><div class="card"> -->
+                                <a ui-sref="jobs({jobID: a.id})"><div class="card">
+                                <h3 class="acc-color">{{a.title}}</h3>
+                                <p class="sm-block-p">{{a.publishedCategory+' - '+a.jobCategory}}</p>
+                                <p ng-bind-html="sanitizeHTML(a.publicDescription)"></p>
+                                <hr>
+                                <div class="row job-details">
+                                    <div class="col top-cat">
+                                        <i class="material-icons">pin_drop</i>
+                                        <br ng-if="cardStyle=='col-lg-4'"><br class="only-mobile">
+                                        {{a.city+", "+a.state}}
+                                    </div>
+                                    <div class="col top-cat">
+                                        <i class="material-icons">work</i>
+                                        <br ng-if="cardStyle=='col-lg-4'"><br class="only-mobile">
+                                        {{a.employmentType}}
+                                    </div>
+                                    <div class="col top-cat">
+                                        <i class="material-icons">calendar_today</i>
+                                        <br ng-if="cardStyle=='col-lg-4'"><br class="only-mobile">
+                                        {{ a.dateAdded.split(' ')[0] }}
+                                    </div>
+                                </div>
+                            </div></a>
+                        </div>
+                        
+                    </div>
+                    <!-- <h3 ng-click="loadMore()" ng-if="data != null && filtered.length > 0" class="text-center h3-center acc-color" style="cursor: pointer">{{ loadButton }}</h3> -->
+                </div>
+            </div>
+        </div>
+    
+</div>

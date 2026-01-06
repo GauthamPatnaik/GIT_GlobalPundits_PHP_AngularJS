@@ -1,0 +1,44 @@
+<div class="grad-bg popup-banner">
+    <h3 class="white-color">Applying for {{job.title}} position</h3>
+</div>
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg">
+
+            <form name="jobForm" ng-submit="jobSubmit()">
+                <input type="text" ng-model="applyForm.firstName" name="firstName" placeholder="First Name" required/>
+                <div ng-messages="jobForm.firstName.$error" ng-show="jobForm.firstName.$touched">
+                    <div ng-message="required" class="formError">This field is required</div>
+                </div>
+
+                <input type="text" ng-model="applyForm.lastName" name="lastName" placeholder="Last Name" required/>
+                <div ng-messages="jobForm.lastName.$error" ng-show="jobForm.lastName.$touched">
+                    <div ng-message="required" class="formError">This field is required</div>
+                </div>
+
+                <input type="email" ng-model="applyForm.mail" name="mail" placeholder="email@domain" required/>
+                <div ng-messages="jobForm.mail.$error" ng-show="jobForm.mail.$touched">
+                    <div ng-message="required" class="formError">This field is required</div>
+                    <div ng-message="email" class="formError">Not a valid email ID</div>
+                </div>
+
+                <input type="text" ng-model="applyForm.phone" ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/" name="phone" placeholder="Mobile Phone" required/>
+                <div ng-messages="jobForm.phone.$error" ng-show="jobForm.phone.$touched">
+                    <div ng-message="required" class="formError">This field is required</div>
+                    <div ng-message="pattern" class="formError">Must be a valid 10 digit phone number</div>
+                </div>
+
+                <label class="uploadLabel">
+                    <input type='file' name="fileUpload" ng-model='fileUpload' onloadend="fileSuccess" onerror="fileError" accept=".doc,.docx,.txt,.pdf,.rtf,.odt" do-not-parse-if-oversize base-sixty-four-input>
+                    <span><i class="material-icons primary-color">attach_file</i>&nbsp; {{fileName}}</span>
+                </label>
+
+                <br><br>
+                <input type="submit" value="Apply now" class="block-btn block-btn-solid">
+                <br>
+            </form>
+            
+        </div>
+    </div>
+</div>

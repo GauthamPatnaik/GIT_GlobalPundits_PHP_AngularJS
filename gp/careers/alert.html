@@ -1,0 +1,71 @@
+<div ng-controller="jobAlertController">
+    <div class="container-fluid grad-bg" id="top-block">
+        <div class="container-fluid">
+            
+        </div>
+    </div>
+    
+    <div class="container-fluid">
+        <div id="content-area" class="row">
+            <!-- <div id="filters-section" class="col-lg">
+        
+            </div> -->
+            <div id="content-section" class="col-lg">
+                <div class="container white-bg-content">
+                    <h1 class="acc-color">Jobs Alert</h1>
+
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum ut excepturi assumenda repellendus commodi iusto voluptates nesciunt tempora architecto provident alias adipisci rem corrupti mollitia saepe consequatur, velit ducimus quae atque, et facilis! Officiis molestias autem, minus eos ipsam deleniti earum itaque odio quod. Itaque, quod accusantium excepturi nesciunt iusto possimus beatae impedit reprehenderit culpa autem dolore? Ducimus, maiores. Fugit praesentium, suscipit illo quidem tempore alias rem animi eaque? Voluptates veniam ullam beatae nihil nobis, possimus tempora aliquid incidunt hic natus sed. Itaque nemo facere eveniet necessitatibus ipsa id fugiat doloribus, assumenda explicabo, placeat illo mollitia architecto consequuntur recusandae fugit!</p>
+                    
+                    <br><hr><br>
+
+                    <div class="row justify-content-left">
+                        <div class="col-lg-5">
+                            
+                            <form name="alertsForm" ng-submit="submitForm()">
+
+                                <h3 class="acc-color">Name</h3>
+                                <input type="text" ng-model="packet.name" name="name" placeholder="Your full name" required/>
+                                <div ng-messages="alertsForm.name.$error" ng-show="alertsForm.name.$touched">
+                                    <div ng-message="required" class="formError">This field is required</div>
+                                </div>
+
+                                <h3 class="acc-color">E-mail</h3>
+                                <input type="email" ng-model="packet.mail" name="mail" placeholder="email@domain" required/>
+                                <div ng-messages="alertsForm.mail.$error" ng-show="alertsForm.mail.$touched">
+                                    <div ng-message="required" class="formError">This field is required</div>
+                                    <div ng-message="email" class="formError">Not a valid email ID</div>
+                                </div>
+
+                                <h3 class="acc-color">Preferred Category</h3>
+                                <ui-select multiple ng-model="selectedCat.value" theme="selectize" autocomplete="off" on-select="selectCategory($item)" on-remove="removeCategory($item)">
+                                    <ui-select-match placeholder="Select Category (multiple)">
+                                        {{$item.name}}
+                                    </ui-select-match>
+                                    <ui-select-choices repeat="item in (categoryFilter | filter: $select.search) track by item.id">
+                                        <span ng-bind="item.name"></span>
+                                    </ui-select-choices>
+                                </ui-select>
+
+                                <br>
+
+                                <h3 class="acc-color">Preferred Job</h3>
+                                <ui-select multiple ng-model="selectedJob.value" theme="selectize" on-select="selectedAll($item)" autocomplete="off" ng-disabled="selectedCat.value.length < 1">
+                                    <ui-select-match placeholder="Select Job (multiple)">
+                                        {{$item.name}}
+                                    </ui-select-match>
+                                    <ui-select-choices repeat="item in (jobFilter | filter: $select.search) track by item.id">
+                                        <span ng-bind="item.name"></span>
+                                    </ui-select-choices>
+                                </ui-select>
+
+                                <br><br>
+                                <input type="submit" value="Subscribe" class="block-btn block-btn-solid">
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>

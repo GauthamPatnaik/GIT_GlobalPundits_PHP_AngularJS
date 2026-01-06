@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GP Careers</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/main-mobile.css">
+    <link rel="stylesheet" type="text/css" href="css/sal.css">
+    <link rel="stylesheet" href="css/bxSlider.css">
+    <link rel="stylesheet" href="css/angular-confirm.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins:700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="js/sal.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.min.js"></script>
+    <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script src="js/angular-confirm.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.7.5/angular-messages.min.js"></script>
+    <script src="js/angular-base64-upload.min.js"></script>
+    
+    <script src="js/app.js"></script>
+
+    <script src="js/listingsController.js"></script>
+    <script src="js/jobController.js"></script>
+    <script src="js/jobAlertController.js"></script>
+
+  <script type="text/javascript">
+      var _cat = _cat || [];
+      _cat.push(['_setAccount','F2V-75N7PEVFN']);
+      (function(){
+          var _cas = document.createElement('script');
+          _cas.type = 'text/javascript';
+          _cas.async = true;
+          _cas.src = "https://apps.callboxinc.com/chat/chat-script.js";
+          var _s = document.getElementsByTagName('script')[0];
+          _s.parentNode.insertBefore(_cas,_s);
+      })();
+  </script>
+</head>
+<body ng-app="gpCareers">
+
+<div id="header" class="container-fluid">
+        <a href="index.php"><div id="logo-container" class="">
+            <img id="header-logo" src="images/gp_no_bg.png" alt="Main Logo">
+        </div></a>
+        <div id="header-links-container" class="row justify-content-around">
+            <div id="header-links" class="col-lg align-self-center">
+                <ul>
+                    <div id="header-link-bg"></div>
+                    <li class="menu-item"><a href="contact.php">Contact</a></li>
+                    <li class="menu-item">Services
+                        <div class="sub-menu sub-menu-nodesc sub-menu-right">
+                            <ul>
+                                <li class="submenu-item"><a href="erp.php">Enterprise Professional Services</a></li>
+                                <li class="submenu-item"><a href="education.php">Higher Education Services</a></li>
+                                <li class="submenu-item"><a href="staff.php">Techincal Staff Augmentaion</a></li>
+                                <li class="submenu-item"><a href="taas.php">Testing As A Service(TAAS)</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu-item">Referrals
+                        <div class="sub-menu sub-menu-desc sub-menu-right row">
+                            <div class="col sub-menu-desc-col">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, nulla similique! Dolores animi dolor necessitatibus aliquid consectetur quos repellendus quasi.
+                            </div>
+                            <ul class="col-4">
+                                <br>
+                                <li class="submenu-item"><a href="referral.php">New Referrals</a></li>
+                                <li class="submenu-item"><a href="trackReferral.php">Track Status</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu-item"><a href="about.php">About Us</a></li>
+                    <li class="menu-item"><a href="/index.php">Home</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="hamburger">
+            <img src="images/hamburger.png" alt="hamburger menu">
+        </div>
+        <div id="mobile-menu">
+            <div id="mobile-menu-slide">
+                <div id="mobile-menu-container">
+                    <ul>
+                        <li class="mob-menu-link"><a href="index.php">Home</a></li>
+                        <li class="mob-menu-link"><a href="about.php">About Us</a></li>
+                        <li id="expandable-1" class="expandable mob-menu-link">Referrals
+                            <div id="exp-container-1" class="expandable-container">
+                                <a href="referral.php"><p>New Referral</p></a>
+                                <a href="trackReferral.php"><p>Track Status</p></a>
+                            </div>
+                        </li class="mob-menu-link">
+                        <li id="expandable-2" class="expandable mob-menu-link">Services
+                            <div id="exp-container-2" class="expandable-container">
+                                <a href="erp.php"><p>Enterprise Professional Services</p></a>
+                                <a href="education.php"><p>Higher Education Services</p></a>
+                                <a href="staff.php"><p>Techincal Staff Augmentaion</p></a>
+                                <a href="taas.php"><p>Testing As A Service (TAAS)</p></a>
+                            </div>
+                        </li>
+                        <li class="mob-menu-link">Four</li>
+                        <li class="mob-menu-link"><a href="contact.php">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</div>
+
+<div id="router">
+    <ui-view></ui-view>
+</div>    
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div id="footer" class="container-fluid">
+    <div class="container">
+        <div class="row justify-content-center align-items-top">
+			<div data-sal="slide-up" data-sal-duration="500" data-sal-delay="100" id="" class="col-lg-3">
+                <h3>Sitemap</h3>
+                <ul class="footer-list">
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="about.php">About Us</a></li>
+                    <li><a href="referral.php">Referrals</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                </ul>
+            </div>
+            <div data-sal="slide-up" data-sal-duration="500" data-sal-delay="200" id="" class="col-lg">
+                <h3>Services</h3>
+                <ul class="footer-list">
+                    <li><a href="erp.php">Enterprise Managed Services</a></li>
+                    <li><a href="staff.php">Staff Augmentation</a></li>
+                    <li><a href="education.php">Higher Education Services</a></li>
+                    <li><a href="taas.php">Testing As A Service</a></li>
+                </ul>        
+            </div>
+			<div data-sal="slide-up" data-sal-duration="500" data-sal-delay="300" class="col-lg">
+                <h3>Contact Info</h3>
+                <p class="footer-p"><strong><i class="material-icons">directions</i></strong>&nbsp; 4715D Sunset Blvd | Lexington SC 29072</p>
+                <p class="footer-p"><strong><i class="material-icons">local_phone</i></strong>&nbsp; (803) 354-9400</p>
+                <p class="footer-p"><strong><i class="material-icons">local_printshop</i></strong>&nbsp; (803) 996-1055</p>
+                <p class="footer-p"><strong><i class="material-icons">email</i></strong>&nbsp;  info@globalpundits.com</p>
+            </div>
+			<div data-sal="slide-up" data-sal-duration="500" data-sal-delay="400" class="col-lg">
+                <h3>Legal Info</h3>
+                <ul class="footer-list">
+                    <li><a href="terms.php">Terms of Use</a></li>
+                    <li><a href="privacy.php">Privacy Statement</a></li>
+                </ul>  
+            </div>
+		</div>
+    </div>
+
+    <br>
+    
+    <div class="row">
+        <div class="col">
+            <hr>
+            <p class="text-center">Globalpundits® 2018</p>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/header.js"></script>
+<script src="js/index.js"></script>
+
+</html>

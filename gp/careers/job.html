@@ -1,0 +1,84 @@
+<div ng-controller="jobController">
+<div class="container-fluid grad-bg" id="top-block">
+    <div class="container-fluid">
+        <div class="row align-items-bottom justify-content-center text-center">
+            <div id="jobPageBlock" class="col-lg-8">
+                <h2 ng-cloak id="jobTitle" class="white-color">{{ jobIndex[0]+' | '+job['title'] }}</h2>
+                <hr>
+                <div class="row">
+                    <div class="col white-color top-cat"><p>
+                        <i class="material-icons primary-color">filter_list</i></strong>&nbsp;{{ job['publishedCategory'] }}
+                    </p></div>
+                    <div class="col white-color top-cat"><p>
+                        <i class="material-icons primary-color">work</i></strong>&nbsp;{{ job['employmentType'] }}
+                    </p></div>
+                    <div class="col white-color top-cat"><p>
+                        <i class="material-icons primary-color">pin_drop</i></strong>&nbsp;{{ job['city'] +', '+ job['state'] }}
+                    </p></div>
+                </div>
+                <!-- <p>{{ job['city'] +', '+ job['state'] }}</p> -->
+            </div>
+        </div>
+    </div>
+    <a class="not-mobile" ui-sref="jobsBoard"><p class="bottom-aligned-text white-color top-cat"><i class="material-icons primary-color">arrow_back</i> Back</p></a>
+</div>
+
+<div class="container-fluid">
+    <div id="content-area" class="row">
+        <div id="filters-section" class="col-lg">
+    
+        </div>
+        <div id="content-section" class="col-lg">
+                
+            
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 grey-bg only-mobile">
+                        <br>
+                        <div class="white-bg">
+                            <input ng-click="applyJob()" type="button" value="Apply now" class="block-btn block-btn-solid">
+                            <a href="/referral.php">
+                              <input type="button" value="Refer someone else" class="block-btn block-btn-outln">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg">
+                        <div class="container">
+                            <h3 class="acc-color">Job Description</h3>
+                            <p class="small-txt dateAdded">Added - {{ job.dateAdded.split(' ')[0] }}</p>
+                            <p ng-bind-html="sanitizeHTML(job['publicDescription'])"></p>
+                            <br><br>
+
+                            <br><br>
+                            <!--<p>* All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity or national origin. </p>-->
+                             <!-- <p>* Globalpundits is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability or veteran status.</p> -->
+                          <p>* Globalpundits is an Equal Opportunity/Affirmative Action employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability or protected veteran status. Globalpundits is also committed to making our workplace accessible to individuals with disabilities and will provide reasonable accommodations, upon request, for individuals to participate in the application and hiring process. To request such an accommodation,  you can contact us by email at <a href="mailto:gp@globalpundits.com">gp@globalpundits.com</a>.</p> 
+                          <p class="">"<a href="https://www.dol.gov/sites/dolgov/files/ofccp/regs/compliance/posters/pdf/eeopost.pdf" target="_blank"><b>EEO is the Law Poster</b></a>", "<a href="https://www.dol.gov/sites/dolgov/files/ofccp/regs/compliance/posters/pdf/OFCCP_EEO_Supplement_Final_JRF_QA_508c.pdf" target="_blank"><b>EEO is the Law Poster Supplement</b></a>"</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 grey-bg">
+                        <br>
+                        <div class="white-bg not-mobile">
+                            <input ng-click="applyJob()" type="button" value="Apply now" class="block-btn block-btn-solid">
+                            <a href="/referral.php"><input type="button" value="Refer someone else" class="block-btn block-btn-outln"></a>
+                        </div>
+
+                        <div class="white-bg">
+                            <h3 class="acc-color">
+                               Similar jobs in {{job['publishedCategory']}} category
+                            </h3>
+                            <span ng-repeat="x in similar">
+                                <p ng-click="getJob(x.id)" class="primary-link">{{ x.title }}</p>
+                                <p ng-click="getJob(x.id)" class="small-txt">{{ x.city+', '+x.state }}</p>
+                                <hr ng-if="$index<similar.length-1">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            
+    
+        </div>
+    </div>
+</div>
+</div>
