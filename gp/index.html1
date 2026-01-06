@@ -89,7 +89,7 @@
     
 <div id="header" class="container-fluid">
 	<div id="logo-container" class="">
-        <img id="header-logo" src="images/gp_no_bg.png" alt="Main Logo">
+        <img id="header-logo" src="images/gp_no_bg_1.png" alt="Main Logo">
 	</div>
     <div id="header-links-container" class="row justify-content-around">
         <div id="header-links" class="col-lg align-self-center">
