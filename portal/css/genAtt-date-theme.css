@@ -1,0 +1,68 @@
+/*
+
+	INSTRUCTIONS ---------------------------------------------------------------------------------
+  
+  1. link this stylesheet in the head of your HTML
+  	 <link href="YOUR PATH/genAtt-date-theme.css" rel="stylesheet" type="text/css" />
+     
+  2. Set the file name as data-theme attribute on your input
+  	 <input data-theme="genAtt-date-theme" />
+     
+  3. That's it!
+  
+  When you run script the style will be automatically applied.
+
+*/
+div.datedropper.genAtt-date-theme {
+  border-radius: 8px;
+  width: 180px;
+}
+div.datedropper.genAtt-date-theme .picker {
+  border-radius: 8px;
+  box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.25);
+}
+div.datedropper.genAtt-date-theme .pick-l {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+div.datedropper.genAtt-date-theme:before,
+div.datedropper.genAtt-date-theme .pick-submit,
+div.datedropper.genAtt-date-theme .pick-lg-b .pick-sl:before,
+div.datedropper.genAtt-date-theme .pick-m,
+div.datedropper.genAtt-date-theme .pick-lg-h {
+  background-color: #0275d8;
+}
+div.datedropper.genAtt-date-theme .pick-y.pick-jump,
+div.datedropper.genAtt-date-theme .pick li span,
+div.datedropper.genAtt-date-theme .pick-lg-b .pick-wke,
+div.datedropper.genAtt-date-theme .pick-btn {
+  color: #0275d8;
+}
+div.datedropper.genAtt-date-theme .picker,
+div.datedropper.genAtt-date-theme .pick-l {
+  background-color: #FFF;
+}
+div.datedropper.genAtt-date-theme .picker,
+div.datedropper.genAtt-date-theme .pick-arw,
+div.datedropper.genAtt-date-theme .pick-l {
+  color: #4D4D4D;
+}
+div.datedropper.genAtt-date-theme .pick-m,
+div.datedropper.genAtt-date-theme .pick-m .pick-arw,
+div.datedropper.genAtt-date-theme .pick-lg-h,
+div.datedropper.genAtt-date-theme .pick-lg-b .pick-sl,
+div.datedropper.genAtt-date-theme .pick-submit {
+  color: #FFF;
+}
+div.datedropper.genAtt-date-theme.picker-tiny:before,
+div.datedropper.genAtt-date-theme.picker-tiny .pick-m {
+  background-color: #FFF;
+}
+div.datedropper.genAtt-date-theme.picker-tiny .pick-m,
+div.datedropper.genAtt-date-theme.picker-tiny .pick-m .pick-arw {
+  color: #4D4D4D;
+}
+div.datedropper.genAtt-date-theme.picker-lkd .pick-submit {
+  background-color: #FFF;
+  color: #4D4D4D;
+}

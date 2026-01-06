@@ -1,0 +1,46 @@
+body {
+	min-height: 100vh;
+	background: linear-gradient(143deg, #11b4ff, #089ce1, #0c6ee1, #054896);
+	background-size: 800% 800%;
+
+	-webkit-animation: AnimationName 6s ease infinite;
+	-moz-animation: AnimationName 6s ease infinite;
+	animation: AnimationName 6s ease infinite;
+	/*background: rgba(2,89,165,1);
+	background: -moz-linear-gradient(top, rgba(2,89,165,1) 0%, rgba(2,89,165,1) 17%, rgba(40,152,250,1) 73%, rgba(40,152,250,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(2,89,165,1)), color-stop(17%, rgba(2,89,165,1)), color-stop(73%, rgba(40,152,250,1)), color-stop(100%, rgba(40,152,250,1)));
+	background: -webkit-linear-gradient(top, rgba(2,89,165,1) 0%, rgba(2,89,165,1) 17%, rgba(40,152,250,1) 73%, rgba(40,152,250,1) 100%);
+	background: -o-linear-gradient(top, rgba(2,89,165,1) 0%, rgba(2,89,165,1) 17%, rgba(40,152,250,1) 73%, rgba(40,152,250,1) 100%);
+	background: -ms-linear-gradient(top, rgba(2,89,165,1) 0%, rgba(2,89,165,1) 17%, rgba(40,152,250,1) 73%, rgba(40,152,250,1) 100%);
+	background: linear-gradient(to bottom, rgba(2,89,165,1) 0%, rgba(2,89,165,1) 17%, rgba(40,152,250,1) 73%, rgba(40,152,250,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0259a5', endColorstr='#2898fa', GradientType=0 );*/
+}
+@-webkit-keyframes AnimationName {
+    0%{background-position:4% 0%}
+    50%{background-position:97% 100%}
+    100%{background-position:4% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:4% 0%}
+    50%{background-position:97% 100%}
+    100%{background-position:4% 0%}
+}
+@keyframes AnimationName { 
+    0%{background-position:4% 0%}
+    50%{background-position:97% 100%}
+    100%{background-position:4% 0%}
+}
+.card-middle {
+	margin-top: -100px;
+	opacity: 0;
+	transition: margin-top 0.5s, opacity 1s;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.card-logo {
+	width: 85%;
+	max-width: 370px;
+	height: auto;
+	margin-left: 25px;
+	margin-bottom: -40px;
+	/* border: 2px solid #000000; */
+}
