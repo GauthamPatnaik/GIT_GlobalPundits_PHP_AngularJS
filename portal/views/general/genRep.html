@@ -1,0 +1,79 @@
+
+<div id="viewContainer" ng-controller="genRepController" class="container">
+	<br>
+  <div ng-if="access==false" class="alert alert-primary" role="alert">
+    You do not have access to this page.
+  </div>
+  <br>
+	<div ng-show="access" class="card rounded-0 border-0">
+		<div class="card-header text-center card-header-narrow">
+			Generate attendance report
+		</div>
+
+		<div class="row justify-content-center card-body">
+			<div class="col-md-3">
+				<div class="md-form">
+				    <label for="fromDate">From</label>
+				    <input ng-model="fromDate" type="text" id="fromDate" class="form-control" placeholder="" aria-describedby="basic-addon1"
+				  data-format="Y-m-d" data-large-mode="true" data-large-default="true" data-lock="to" data-min-year="2017" data-theme="genAtt-date-theme">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="md-form">
+				    <label for="toDate">To</label>
+				    <input ng-model="toDate" type="text" id="toDate" class="form-control" placeholder="" aria-describedby="basic-addon1"
+				  data-format="Y-m-d" data-large-mode="true" data-large-default="true" data-lock="to" data-min-year="2017" data-theme="genAtt-date-theme">
+				</div>
+			</div>
+			<div class="col-md-2">
+				<button ng-click="reportData()" type="button" class="btn btn-success btn-rounded aqua-gradient">Fetch</button>
+			</div>
+		</div>
+
+	</div>
+	<hr>
+	<br>
+  
+	<div ng-if="repData" class="card rounded-0 border-0">
+		<div class="card-header text-center">
+			Report
+			<div class="pull-right"><button ng-click="exportData()" type="button" class="btn btn-sm btn-outline-light rounded-0">Export</button></div>
+		</div>
+		<div class="card-body">
+      <table id="repTable" class="table table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Present</th>
+            <th>Absent</th>
+            <th>Status unknown</th>
+            <th>Avg Time</th>
+          </tr>
+        </thead>
+        
+        <tbody ng-repeat="a in repData">
+          <tr>
+            <td>{{ a.ID }}</td>
+            <td>{{ a.name }}</td>
+            <td>{{ a.Present }}</td>
+            <td>{{ a.Absent }}</td>
+            <td>{{ a.SU }}</td>
+            <td>{{ ((a.avg_time-(a.avg_time%(3600*a.Present)))/(3600*a.Present)) + ':' + (a.avg_time%60) }}</td>
+          </tr>
+        </tbody>
+      </table>
+		</div>
+	</div>
+  
+</div>
+
+<script type="text/javascript">
+	$('#fromDate').dateDropper();
+	$('#toDate').dateDropper();
+</script>
+<script type="text/javascript">
+    TweenMax.set($("#viewContainer"), {marginTop: 50, autoAlpha: 0});
+
+    TweenMax.to($("#viewContainer"), 0.5, {marginTop: 0, autoAlpha: 1, ease:Power2.easeInOut});
+</script>

@@ -1,0 +1,118 @@
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.content-pane').css('filter', 'blur(0px)');
+	});
+</script>
+<meta name="google-signin-client_id" content="1067019098654-9v3qri5u07rhjo9c8a6jpea24ecf19vk.apps.googleusercontent.com">
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      window.location.replace('/logout.php');
+    });
+  }
+
+  function onLoad() {
+      gapi.load('auth2', function() {
+        gapi.auth2.init();
+      });
+  }
+</script>
+<script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+
+<div class="modal fade rounded-0" id="passChangeModal" tabindex="-1" role="dialog" aria-labelledby="passChangeModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg rounded-0" role="document">
+    <div class="modal-content rounded-0">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">First Login</h5>
+      </div>
+      <div class="modal-body">
+      	<div class="alert alert-warning" role="alert">
+		  <strong>Welcome <span id="passModal1"></span></strong><br>
+		  <hr>
+		  As this is your first login, you need to change your password to continue. This password should be kept confidential and sharing it with others is against Globalpundits policy.
+		</div>
+        <div class="row justify-content-center">
+        	<div class="col-7">
+        		<div class="input-group" id="passChangeOld">
+				  <span class="input-group-addon" id="basic-addon1">Current password&nbsp;&nbsp;</span>
+				  <input id="modalOldPassword" type="password" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+				</div>
+				<hr>
+				<div class="input-group " id="passChangeNew">
+				  <span class="input-group-addon" id="basic-addon1">New password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				  <input id="modalNewPassword"  type="password" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+				</div>
+				<br>
+				<div class="input-group" id="passChangeRe">
+				  <span class="input-group-addon" id="basic-addon1">Re-enter password</span>
+				  <input id="modalRePassword"  type="password" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+				</div>
+        	</div>
+        </div>
+        <br>
+        <div class="alert alert-danger text-center" role="alert" id="passModalAlert"></div>
+      </div>
+      <div class="modal-footer rounded-0">
+        <button id="passModalSubmit" type="button" class="btn btn-outline-primary rounded-0">Change password</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav id="nav_header" class="navbar navbar-expand-md navbar-light bg-light navbar-dark bg-primary fixed-top shadow-1">
+  <ul class="navbar-nav mr-auto extra-space">
+		<li id="side-pane-button" class="nav-item">
+			<a class="nav-link active"><i class="fa fa-bars fa-lg" aria-hidden="true"></i><span class="sr-only">(current)</span></a>
+		</li>
+  </ul>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" ui-sref="home" ui-sref-active="active">
+    <img src="/images/header-logo.png" width="38" height="36" alt="">
+  </a>
+  <a class="navbar-brand" href="#">Globalpundits Portal</a>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+	<ul class="navbar-nav mr-auto">
+		
+	</ul>
+    <ul class="navbar-nav">
+	  <li class="nav-item">
+			<a class="nav-link" href="/index.php"><i class="fa fa-home fa-lg" aria-hidden="true"></i><span class="sr-only">(current)</span></a>
+	  </li>
+	  <li class="nav-item">
+			<a class="nav-link" href="#"><i class="fa fa-bug fa-lg" aria-hidden="true"></i><span class="sr-only">(current)</span></a>
+	  </li>
+	  <li class="nav-item">
+			<a class="nav-link" href="#"><i class="fa fa-cog fa-bell" aria-hidden="true"></i><span class="sr-only">(current)</span></a>
+	  </li>
+	  <li ng-app="navProfile" ng-controller="navProfileLoader" ng-hide="!myWelcome" class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i> {{empID}}
+        </a>
+        <div id="nav-profile"  class="dropdown-menu dropdown-menu-right dropdown-menu-nav" aria-labelledby="navbarDropdownMenuLink">
+			<div class="container">
+			  <div class="row align-items-center justify-content-around">
+				<div class="col-sm-3 dropdown-user-image">
+					<i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
+				</div>
+				<div class="col-sm-9">
+					<h5>{{myWelcome.firstname + " " + myWelcome.lastname}}</h5>
+					<p>{{myWelcome.designation | capitalize}}</p>
+					<span class="badge badge-primary">{{myWelcome.role | capitalize}}</span>
+				</div>
+			  </div>
+			</div>
+		  <div class="dropdown-divider"></div>
+          <div class="container">
+			<button id="logout_btn" type="button" class="btn btn-danger btn-block btn-rounded" onclick="signOut();"><i class="fa fa-sign-out-alt fa-fw" aria-hidden="true"></i>&nbsp; Logout</button>
+		  </div>
+        </div>
+      </li>
+      <!-- <li class="nav-item"> -->
+        <!-- <a class="nav-link" href="#">Pricing</a> -->
+      <!-- </li> -->
+    </ul>
+  </div>
+</nav>

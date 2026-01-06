@@ -1,0 +1,151 @@
+<div id="viewContainer" ng-controller="reportController" id="" class="container">
+
+  <br>
+
+
+	<div ng-show="referralRecords.length > 0" class="card rounded-0 border-0">
+
+		<div class="card-header text-center">
+
+			Reports
+
+			<div class="pull-right"><button id="excelExport" type="button" class="btn btn-sm btn-outline-light rounded-0">Export</button></div>
+
+		</div>
+
+		<div class="card-body">
+
+      
+
+      <table datatable="ng" id="referralTable" class="table table-hover">
+
+        <thead>
+
+          <tr>
+
+            <th>FullName</th>
+
+            <th>Bullhorn Id</th>
+
+            <th>Contact Number</th>
+
+            <th>Email</th>
+
+            <th>Gender</th>
+
+            <th>Ethnicity</th>
+
+            <th>Veteran</th>
+
+            <th>Disability</th>  
+
+            <th>Occupication</th>  
+
+            <th>EEO</th>  
+
+            <th>Published Category</th>
+
+            <th>Current Positon</th>
+
+            <th>Current Location</th>
+
+            <th>Current Est</th> 
+
+            <th>Date Hired</th>
+
+            <th>Term Date</th>
+
+            <th>FLSA Status</th>
+
+            <th>Salary</th>
+
+            <th>Salary Unit</th>
+
+            <th>Job Submission Status</th>
+
+            <th>Placement Status</th> 
+
+            <th>Date Added</th>            
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr ng-repeat="x in referralRecords">
+
+            <td>{{x.Name}}</td>
+
+            <td>{{x.BH_Id}}</td>
+
+            <td>{{x.Phone}}</td>
+
+            <td>{{x.Email}}</td>
+
+            <td>{{x.Gender}}</td>
+
+            <td>{{x.Ethnicity}}</td>
+
+            <td>{{x.Veteran}}</td>
+
+            <td>{{x.Disability}}</td>  
+
+            <td>{{x.Occupication}}</td>  
+
+            <td>{{x.EeoJobCat}}</td>  
+
+            <td>{{x.PublishedCategory}}</td>
+
+            <td>{{x.CurrentPositon}}</td>
+
+            <td>{{x.CurrentLocation}}</td>
+
+            <td>{{x.CurrentEst}}</td> 
+
+            <td>{{x.DateHired}}</td>
+
+            <td>{{x.TermDate}}</td>  
+
+            <td>{{x.FlsaStatus}}</td>  
+
+            <td>{{x.Salary}}</td>
+
+            <td>{{x.SalaryUnit}}</td>
+
+            <td>{{x.JobSubmissionStatus}}</td>
+
+            <td>{{x.PlacementStatus}}</td> 
+
+            <td>{{x.DateAdded}}</td>              
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+    TweenMax.set($("#viewContainer"), {marginTop: 50, autoAlpha: 0});
+
+
+
+    TweenMax.to($("#viewContainer"), 0.5, {marginTop: 0, autoAlpha: 1, ease:Power2.easeInOut});
+
+</script>
+
+
+
+
+

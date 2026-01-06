@@ -1,0 +1,54 @@
+	<div class="side-pane">
+		<div class="side-pane-fixed">
+			<div class="list-group no-radius">
+			  <a id="sidenav1" ui-sref="home" ui-sref-active="active" class="list-group-item">
+				<i class="fa fa-chart-area fa-fw" aria-hidden="true"></i>&nbsp; Dashboard
+			  </a>
+			  <!-- <a id="sidenav2" class="list-group-item list-group-item-action" data-toggle="collapse" href="#link1Collapse" aria-expanded="false" aria-controls="link1Collapse">
+				<i class="fa fa-calendar-check-o" aria-hidden="true"></i>Attendance   <i class="fa fa-caret-down" aria-hidden="true"></i>
+			  </a> -->
+			  <button class="list-group-item list-group-item-action" type="button" data-toggle="collapse" data-target="#link1Collapse" aria-expanded="false" aria-controls="link1Collapse">
+			    <i class="fa fa-calendar-check fa-fw" aria-hidden="true"></i>&nbsp; Attendance   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i>
+			  </button>
+			  <div class="collapse" id="link1Collapse">
+				<div class="list-group no-radius">
+					<a ui-sref="markAtt" ui-sref-active="active" class="list-group-item list-group-item-action sub-list">Mark Attendance</a>
+					<a ui-sref="genAtt" ui-sref-active="active" class="list-group-item list-group-item-action sub-list">Generate Attendance</a>
+					<a ui-sref="modAtt" ui-sref-active="active" class="list-group-item list-group-item-action sub-list">Modify Attendance</a>
+					<a ui-sref="approveAtt" ui-sref-active="active" class="list-group-item list-group-item-action sub-list">Approve/Reject Request</a>
+          <a ui-sref="genRep" ui-sref-active="active" class="list-group-item list-group-item-action sub-list">Generate Report</a>
+				</div>
+			  </div>
+<!-- 			  <a id="sidenav3" ui-sref="admin" ui-sref-active="active" class="list-group-item list-group-item-action disabled">
+			    <i class="fa fa-id-card fa-fw" aria-hidden="true"></i>&nbsp; Admin&nbsp;&nbsp;<span class="badge badge-secondary">inactive</span>
+			  </a>
+			  <a id="sidenav4" href="#" class="list-group-item list-group-item-action disabled">
+			    <i class="fa fa-calendar-times fa-fw" aria-hidden="true"></i>&nbsp; Leave&nbsp;&nbsp;<span class="badge badge-secondary">inactive</span>
+			  </a> -->
+<!-- 			  <a ui-sref="onboarding" ui-sref-active="active" class="list-group-item list-group-item-action">
+			    <i class="fas fa-clipboard fa-fw" aria-hidden="true"></i>&nbsp; Onboarding
+			  </a> -->
+
+			  <button class="list-group-item list-group-item-action" type="button" data-toggle="collapse" data-target="#link2Collapse" aria-expanded="false" aria-controls="link2Collapse">
+			    	<i class="fa fa-clipboard fa-fw" aria-hidden="true"></i>&nbsp; Onboarding   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i>
+			  </button>
+			  <div class="collapse" id="link2Collapse">
+          <div class="list-group no-radius">
+            <a ui-sref="rtr" ui-sref-active="active" class="list-group-item list-group-item-action sub-list">Send RTR Documents</a>
+            <a ui-sref="onboarding" ui-sref-active="active" class="list-group-item list-group-item-action sub-list">Send Onboard Documents</a>
+            <a ui-sref="onboarding_status" ui-sref-active="active" class="list-group-item list-group-item-action sub-list">Check Status</a>            
+          </div>
+			  </div>
+        <a ui-sref="referrals" ui-sref-active="active" class="list-group-item">
+          <i class="fa fa-chart-area fa-fw" aria-hidden="true"></i>&nbsp; Referrals
+        </a>
+             <a ui-sref="report" ui-sref-active="active" class="list-group-item">
+			<i class="fa fa-list" aria-hidden="true"></i>&nbsp; Reports
+		  </a>
+        
+<!--         <a ui-sref="scheduler" ui-sref-active="active" class="list-group-item">
+          <i class="fas fa-celendar-alt" aria-hidden="true"></i>&nbsp; Appointment Scheduler
+        </a> -->
+			</div>
+		</div>
+	</div>

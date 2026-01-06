@@ -1,0 +1,170 @@
+<div id="viewContainer" ng-controller="modAttController" id="modAtt" class="container">
+<br>
+<div class="card rounded-0 border-0">
+	<div class="card-header text-center card-header-narrow">
+		Modify attendance
+	</div>
+	<div class="row justify-content-center card-body">
+		<div class="col-md-3">
+			<!-- <div class="input-group">
+			  <span class="input-group-addon" id="basic-addon1">Att Date</span>
+			  <input ng-model="recDate" type="text" id="fromDate" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"
+			  data-format="Y-m-d" data-large-mode="true" data-lock="to" data-min-year="2017" data-theme="genAtt-date-theme">
+			</div> -->
+
+			<div class="md-form">
+			    <label for="fromDate">Att Date</label>
+			    <input ng-model="recDate" type="text" id="fromDate" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"
+			  data-format="Y-m-d" data-large-mode="true" data-lock="to" data-min-year="2017" data-theme="genAtt-date-theme">
+			</div>
+		</div>
+		<div class="col-md-2">
+			<button ng-click="getRecord()" type="button" class="btn btn-success btn-rounded aqua-gradient">Fetch</button>
+		</div>
+	</div>
+</div>
+<br>
+<div ng-show="displayRecord" class="card container border-0 rounded-0">
+	<div class="row card-header text-center">
+		<div class="col">In date</div>
+		<div class="col">In time</div>
+		<div class="col">Out Date</div>
+		<div class="col">Out time</div>
+		<div class="col">Status</div>
+		<div class="col">Action</div>
+	</div>
+	<div ng-show="recordData.length > 0" class="row card-body text-center justify-content-middle">
+		<div class="col"><p id="date_in">{{ recordData[0].date_in}}</p></div>
+		<div class="col"><p id="att_in">{{ recordData[0].att_in}}</p></div>
+		<div class="col"><p id="date_out">{{ recordData[0].date_out}}</p></div>
+		<div class="col"><p id="att_out">{{ recordData[0].att_out}}</p></div>
+		<div ng-if=" recordData[0].status == 'Present' " class="col text-success"><p>{{ recordData[0].status}}</p></div>
+		<div ng-if=" recordData[0].status == 'Absent' " class="col text-danger"><p>{{ recordData[0].status}}</p></div>
+		<div ng-if=" recordData[0].status == 'Status unknown' " class="col text-warning"><p>{{ recordData[0].status}}</p></div>
+		<div class="col">
+			<div class="btn-group">
+			  <button class="btn btn-primary dropdown-toggle btn-rounded" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    Modify
+			  </button>
+			  <div class="dropdown-menu dropdown-menu-right">
+			  	<h6 class="dropdown-header">Modify action</h6>
+			  	<a ng-click="modifyIn()" class="dropdown-item">In time</a>
+			    <a ng-click="modifyOut()" class="dropdown-item">Out time</a>
+			    <div class="dropdown-divider"></div>
+			    <a ng-click="modifyBoth()" class="dropdown-item">Both</a>
+			  </div>
+			</div>
+			<!-- <button ng-click="fetchData()" type="button" class="btn btn-outline-success">Fetch</button> -->
+		</div>
+	</div>
+
+	<div ng-show="recordData.length == 0" class="card-body text-center">
+		No record found  for that date
+	</div>
+</div>
+
+<br>
+<div ng-show="modifyRecord" class="card container border-0 rounded-0">
+	<div class="row card-header text-center justify-content-center">
+		<div ng-show="modifyType == 'in' || modifyType == 'both'" class="col-2">In time</div>
+		<div ng-show="modifyType == 'out' || modifyType == 'both'" class="col-3">Out date</div>
+		<div ng-show="modifyType == 'out' || modifyType == 'both'" class="col-2">Out time</div>
+		<div class="col-2">Action</div>
+	</div>
+
+	<div class="row card-body text-center justify-content-center">
+		<div ng-show="modifyType == 'in' || modifyType == 'both'" class="col-2">
+			<div class="input-group">
+			  <span class="input-group-addon" id="basic-addon1">
+			  	<i class="fa fa-clock-o" aria-hidden="true"></i>	
+			  </span>
+			  <input ng-model="time.att_in1" id="att_in_input" type="text" class="form-control" placeholder="In time" aria-label="" aria-describedby="basic-addon1">
+			</div>
+		</div>
+		<div ng-show="modifyType == 'out' || modifyType == 'both'" class="col-3">
+				<div class="btn-group" role="group" aria-label="Basic example">
+				  <button ng-click="dateOutSelect('same')" id="sameDayBtn" type="button" class="btn btn-primary">Same day</button>
+				  <button ng-click="dateOutSelect('next')" id="nextDayBtn" type="button" class="btn btn-outline-primary">Next day</button>
+				</div>
+		</div>
+		<div ng-show="modifyType == 'out' || modifyType == 'both'" class="col-2">
+			<div class="input-group">
+			  <span class="input-group-addon" id="basic-addon1">
+			  	<i class="fa fa-clock-o" aria-hidden="true"></i>	
+			  </span>
+			  <input ng-model="time.att_out1" id="att_out_input" type="text" class="form-control" placeholder="In time" aria-label="" aria-describedby="basic-addon1">
+			</div>
+		</div>
+		<div class="col-2">
+			<button ng-click="postRequest()" type="button" class="btn btn-success btn-rounded">Go</button>
+		</div>
+	</div>
+</div>
+<hr>
+
+<div class="card rounded-0 border-0">
+	<div class="card-header text-center">
+		Requests submitted
+	</div>
+	<table class="table table-hover">
+	  <thead class="table-inverse">
+	    <tr>
+	      <th>Req ID</th>
+	      <th>Att Date</th>
+	      <th>In Time</th>
+	      <th>Out Date</th>
+	      <th>Out Time</th>
+	      <th>Type</th>
+	      <th>Status</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr ng-repeat="z in subData">
+	      <td>{{ z.req_id }}</td>
+	      <td>{{ z.date_in }}</td>
+
+	      <td ng-if=" z.type != 'out' ">{{ z.att_in }}</td>
+	      <td ng-if=" z.type == 'out' ">-</td>
+
+	      <td ng-if=" z.type != 'in' ">{{ z.date_out }}</td>
+	      <td ng-if=" z.type == 'in' ">-</td>
+
+	      <td ng-if=" z.type != 'in' ">{{ z.att_out }}</td>
+	      <td ng-if=" z.type == 'in' ">-</td>
+
+	      <td>{{ z.type }}</td>
+	      <td ng-if=" z.status == 'Pending' " class="text-primary" data-toggle="tooltip" data-placement="left" title={{z.remark}}><strong>{{ z.status }}</strong></td>
+	      <td ng-if=" z.status == 'Approved' " class="text-success" data-toggle="tooltip" data-placement="left" title={{z.remark}}><strong>{{ z.status }}</strong></td>
+	      <td ng-if=" z.status == 'Rejected' " class="text-danger" data-toggle="tooltip" data-placement="left" title={{z.remark}}><strong>{{ z.status }}</strong></td>
+	    </tr>
+	    <!-- <tr ng-repeat="l in subData">
+	      <td>{{ l.og_att_in }}</td>
+	      <td>{{ l.og_date_out }}</td>
+	      <td>{{ l.og_att_out }}</td>
+	    </tr> -->
+	  </tbody>
+	</table>
+	<p ng-if="subData.length<1" class="text-center">You have no requests Pending/Approved/Rejected</p>
+</div>		
+</div>
+
+<script type="text/javascript">
+$("#att_in_input").timeDropper({
+	format: 'H:mm:00',
+	setCurrentTime: false
+});
+
+$("#att_out_input").timeDropper({
+	format: 'H:mm:00',
+	setCurrentTime: false
+});
+
+$('#fromDate').dateDropper();
+$('#toDate').dateDropper();
+</script>
+
+<script type="text/javascript">
+    TweenMax.set($("#viewContainer"), {marginTop: 50, autoAlpha: 0});
+
+    TweenMax.to($("#viewContainer"), 0.5, {marginTop: 0, autoAlpha: 1, ease:Power2.easeInOut});
+</script>

@@ -1,0 +1,69 @@
+<div id="viewContainer" ng-controller="approveAttController" id="approveAtt" class="container">
+<div ng-show="flag.auth == 'false' " class="alert alert-warning border-0 rounded-0 shadow-1 text-center" role="alert">
+<i class="fa fa-exclamation-circle" aria-hidden="true"></i>  You are not authorized to view this page
+</div>
+
+<div ng-show="records.length < 1 " class="alert alert-info border-0 rounded-0 shadow-1 text-center" role="alert">
+<i class="fa fa-exclamation-circle" aria-hidden="true"></i>  No requests pending
+</div>
+
+<div ng-repeat="z in records" class="card border-0 rounded-0 appCard">
+	<div class="card-header"  data-toggle="collapse" data-target="#collapse{{$index}}" aria-expanded="false">
+		<b>{{z.firstname+' '+z.lastname}}({{z.emp_id}})</b> applied for attendance modification for <b>{{z.date_in}}</b>
+		<span class="float-right"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+	</div>
+	<div class="collapse multi-collapse" id="collapse{{$index}}">
+  	<div class="card-body">
+    	<div class="row align-items-start justify-content-center align-items-center">
+    		<div class="col-4">
+    			<div class="card rounded-0 shadow-0">
+    				<div class="card-header">
+    					Applied by
+    				</div>
+    				<div class="card-body">
+        				<p class=""><b>Name -</b> {{z.firstname+' '+z.lastname}}</p>
+        				<p class=""><b>ID -</b> {{z.emp_id}}</p>
+        				<p class=""><b>Att date -</b> {{z.date_in}}</p>
+    				</div>
+    			</div>
+    		</div>
+
+    		<div class="col-4">
+    			<div class="card rounded-0 shadow-0">
+    				<div class="card-header">
+    					Attendance time
+    				</div>
+    				<div class="card-body">
+        				<p ng-if="z.type == 'both' || z.type == 'in'" class=""><b>In time -</b> {{z.og_att_in+'/'+z.att_in}}</p>
+        				<p ng-if="z.type == 'out'" class=""><b>In time -</b> -/-</p>
+
+        				<p ng-if="z.type == 'both' || z.type == 'out'" class=""><b>Out Date -</b> {{z.og_date_out+'/'+z.date_out}}</p>
+        				<p ng-if="z.type == 'in'" class=""><b>Out Date -</b> -/-</p>
+
+        				<p ng-if="z.type == 'both' || z.type == 'out'" class=""><b>Out time -</b> {{z.og_att_out+'/'+z.att_out}}</p>
+        				<p ng-if="z.type == 'in'" class=""><b>Out time -</b> -/-</p>
+    				</div>
+    			</div>
+    		</div>
+
+    		<div class="col-4 text-center">
+    			<div class="card rounded-0 shadow-0">
+    				<div class="card-body">
+    					<p class="text-left">Remarks -</p>
+        				<textarea id="remark{{z.req_id}}" class="form-control" id="" rows="3"></textarea>
+        				<p></p>
+        				<div class="btn-group btn-group-sm align-self-center" role="group" aria-label="Basic example">
+						  <button ng-click="approveAction(z.req_id)" type="button" class="btn btn-outline-success align-self-center">Approve</button>
+						  <button ng-click="rejectAction(z.req_id)" type="button" class="btn btn-outline-danger align-self-center">Reject</button>
+						</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+</div>
+<script type="text/javascript">
+    TweenMax.set($("#viewContainer"), {marginTop: 50, autoAlpha: 0});
+
+    TweenMax.to($("#viewContainer"), 0.5, {marginTop: 0, autoAlpha: 1, ease:Power2.easeInOut});
+</script>

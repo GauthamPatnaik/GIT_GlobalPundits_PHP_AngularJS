@@ -1,0 +1,51 @@
+<div class="row">
+	<div class="col text-center primary-bg">
+		<br><br><br><br><br>
+	</div>
+</div>
+<div id="viewContainer" class="container">
+	<div class="card rounded-0 border-0">
+	  <div class="card-body">
+	    <h3 class="text-center">Mark Attendance</h3>
+	  </div>
+	</div>
+
+	<br>
+	<div ng-app="markAtt" ng-controller="markAttController" id="markAtt">
+    
+    <div class="card">
+      <br>
+      <div class="card-body row justify-content-center">
+        <div class="col text-center border border-top-0 border-left-0 border-bottom-0 border-primary">
+          <h2>{{ respData.date_in }}</h2>
+          <p class="text-muted">Date</p>
+        </div>
+        <div class="col text-center border border-top-0 border-left-0 border-bottom-0 border-primary">
+          <h2>{{ respData.att_in }}</h2>
+          <p class="text-muted">IN Time</p>
+        </div>
+        <div class="col text-center border border-top-0 border-left-0 border-bottom-0 border-primary">
+          <h2>{{ respData.att_out }}</h2>
+          <p class="text-muted">OUT Time</p>
+        </div>
+        <div class="col text-center">
+          <h2>{{ respData.status }}</h2>
+          <p class="text-muted">Status</p>
+        </div>
+      </div>
+      <div class="card-body row justify-content-center">
+        <button ng-click="alertUser()" type="button" class="btn btn-success align-self-center btn-rounded">Mark Attendance</button>
+        <button ng-click="reloadButton()" type="button" class="btn btn-primary align-self-center btn-rounded waves-effect">
+          <i class="fas fa-sync-alt" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+    
+	</div>
+
+</div> 
+<script type="text/javascript">
+    TweenMax.set($("#viewContainer"), {marginTop: 50, autoAlpha: 0});
+
+    TweenMax.to($("#viewContainer"), 0.5, {marginTop: 0, autoAlpha: 1, ease:Power2.easeInOut});
+</script>

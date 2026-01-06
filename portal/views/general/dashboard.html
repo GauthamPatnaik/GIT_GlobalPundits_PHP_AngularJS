@@ -1,0 +1,131 @@
+<div id="viewContainer" class="container">		
+<div class="alert alert-primary" role="alert">
+  <strong>Welcome</strong> <span id="displayMessage">cName</span>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	<span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="card-deck">
+	<div class="card rounded-0 border-0">
+		<div class="centering card-blue">
+			<div id="card1" class="radial-blocks">
+				<div class="radial-inner">
+					<h2 class="count">18</h2>
+					<h3 id="card_month1">Month</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="card rounded-0 border-0">
+		<div class="card-blue centering">
+			<div id="card2" class="radial-blocks">
+				<div class="radial-inner">
+					<h2><span class="count2-1">0</span>/<span class="count2-2">0</span></h2>
+					<h3 id="">Working days</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="card rounded-0 border-0">
+		<div class="card-blue centering">
+			<div id="card3" class="radial-blocks">
+				<div class="radial-inner">
+					<h2><span id="in_hr" class="count3-1">00</span><span style="font-size: 18px;">h</span><span id="in_min" class="count3-2">00</span><span style="font-size: 18px;">m</span></h2>
+					<h3 id="">Time IN</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="card rounded-0 border-0">
+		<div ng-app="dashAttStatus" ng-controller="dashAttStatusLoader" id="att_card" class="att-in centering">
+			<div id="card4" class="radial-blocks">
+				<div class="radial-inner">
+					<h2 ng-if="status == 'IN'" class="">IN</h2>
+					<h2 ng-if="status == 'OUT'" class="">OUT</h2>
+					<h2 ng-if="status == 'Status unknown'" class="">SU</h2>
+					<h2 ng-if="status == 'Leave'" class="">Leave</h2>
+					<h3 id="">Attendance</h3>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
+<hr>
+<!-- <div class="container-fluid"> -->
+<br>
+<div class="">
+	<div class="card border-0 rounded-0">
+		<div class="card-header text-center card-header-narrow">Timeline</div>
+		<div class="card-body">
+			<div id="timeline"></div>
+		</div>
+	</div>
+</div>
+<br>
+
+		<div class="row justify-content-between">
+		    <div ng-app="dashAttRecords" ng-controller="dashAttRecordsLoader" id="att_record" class="col-md-8">
+		    	<div class="card rounded-0 border-0">
+		    	<table class="table table-hover">
+				  <thead class="table-inverse">
+				    <tr>
+				      <th>#</th>
+				      <th>ID</th>
+				      <th>Date In</th>
+				      <th>In</th>
+				      <th>Date Out</th>
+				      <th>Out</th>
+				      <th>Status</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr ng-repeat="x in respData">
+				      <th scope="row">{{ $index+1 }}</th>
+				      <td>{{ x.ID }}</td>
+				      <td>{{ x.date_in }}</td>
+				      <td>{{ x.att_in }}</td>
+				      <td>{{ x.date_out }}</td>
+				      <td>{{ x.att_out }}</td>
+				      <td ng-if=" x.status == 'Present' " class="text-success"><strong>{{ x.status }}</strong></td>
+				      <td ng-if=" x.status == 'Absent' " class="text-danger"><strong>{{ x.status }}</strong></td>
+				      <td ng-if=" x.status == 'Status unknown' " class="text-warning"><strong>{{ x.status }}</strong></td>
+				      <td ng-if=" x.status == 'Leave' " class="text-primary"><strong>{{ x.status }}</strong></td>
+				      <td ng-if=" x.status == 'Weekend' " class="text-primary"><strong>{{ x.status }}</strong></td>
+				    </tr>
+				  </tbody>
+				</table>
+				<p  class="text-center small text-secondary">updated <time id="dash_att_time" class="timeago loaded">update time</time></p>
+				</div>
+		    </div>
+		    
+		    <!-- Att records angularjs module -->
+
+		    <div class="col-md-4">
+		    	<div ng-app="empStatus" ng-controller="empStatusController" id="empStatus" class="card rounded-0 border-0">
+		    		<ul class="list-group rounded-0">
+					  <li class="list-group-item rounded-0 active">
+					  	<strong><span>Employee status</span></strong>
+					  	&nbsp;&nbsp;<span class="badge badge-light pull-right" ng-click="reloadEmpButton()"><i class="fa fa-sync-alt" aria-hidden="true"></i></span>
+					  </li>
+					  <span ng-repeat="x in respData" ng-hide="!respData.length">
+					  <li ng-if=" x.status == 'IN' " class="list-group-item list-group-item-success">
+					  	<i class="fa fa-user" aria-hidden="true"></i>  {{ x.firstname+' '+x.lastname }} <span class="badge badge-primary pull-right">{{ x.role }}</span>
+					  </li>
+					  <li ng-if=" x.status == 'Leave' " class="list-group-item list-group-item-info">
+					  	<i class="fa fa-user" aria-hidden="true"></i>  {{ x.firstname+' '+x.lastname }} <span class="badge badge-primary pull-right">{{ x.role }}</span>
+					  </li>
+					  </span>
+					  <p class="small text-secondary text-center emp-status-padding">updated <time id="empStatusTime"></time></p>
+					</ul>
+		    	</div>
+		    </div>
+		</div>
+
+<!-- </div> -->
+</div>
+<script type="text/javascript">
+    TweenMax.set($("#viewContainer"), {marginTop: 50, autoAlpha: 0});
+
+    TweenMax.to($("#viewContainer"), 0.5, {marginTop: 0, autoAlpha: 1, ease:Power2.easeInOut});
+</script>

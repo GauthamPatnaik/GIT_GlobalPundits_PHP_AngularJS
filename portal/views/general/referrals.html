@@ -1,0 +1,91 @@
+<div id="viewContainer" ng-controller="referralController" id="" class="container">
+  <div class="col text-center primary-bg">
+		<br><br><br><br><br>
+	</div>
+
+	<br>
+  
+	<br>
+	<div class="card rounded-0 border-0">
+		<div class="card-header text-center">
+			Referrals
+		</div>
+		<div class="card-body">
+		<table datatable="ng" id="referralTable" class="table table-hover">
+		  <thead>
+		    <tr>
+		      <th>Referee Name</th>
+          <th>Referee Mail</th>
+          <th>Referee Phn</th>
+          <th>Candidate Name</th>
+          <th>Candidate Mail</th>
+          <th>Candidate Phn</th>
+		      <th>Last Updated</th>
+		      <th>BullHorn ID</th>
+          <th>Status</th>
+          <th>Action</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr ng-repeat="x in referralRecords">
+          <td>{{ x.r_name }}</td>
+          <td>{{ x.r_mail }}</td>
+          <td>{{ x.r_phn }}</td>
+          <td>{{ x.c_name }}</td>
+          <td>{{ x.c_mail }}</td>
+          <td>{{ x.c_phn }}</td>
+          <td>{{ x.last_upd }}</td>
+          <td>{{ x.bh_id }}</td>
+          <td>
+            <span ng-if=" x.status == 'new' " class="badge badge-pill light-blue pill-bg">New</span>
+            <span ng-if=" x.status == 'onhold' " class="badge badge-pill pink pill-bg">On Hold</span>
+            <span ng-if=" x.status == 'updated' " class="badge badge-pill green pill-bg">Updated</span>
+          </td>
+          <td class="width-100">
+            <!-- dropdown -->
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary dropdown-toggle btn-rounded btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" ng-click="updateBHID(x.c_name, x.r_mail, x.c_mail)">
+                  <i class="fas fa-redo"></i>&nbsp;&nbsp;Update BH ID
+                </a>
+                <a class="dropdown-item" ng-click="sendMailer(x.c_mail)">
+                  <i class="far fa-envelope"></i>&nbsp;&nbsp;Mail Candidate
+                </a>
+                <a class="dropdown-item"  ng-click="sendMailer(x.r_mail)">
+                  <i class="far fa-envelope"></i>&nbsp;&nbsp;Mail Referee
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item dropdown-warn" ng-click="statusOnHold(x.r_mail, x.c_mail)">
+                  <i class="fas fa-ban"></i>&nbsp;&nbsp;On Hold
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>
+		  </tbody>
+		</table>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$('#fromDate').dateDropper();
+	$('#toDate').dateDropper();
+// 	$(document).ready(function(){
+// 	    table = $('#attTable').DataTable({
+// 	    	buttons: [
+// 		        'copyHtml5',
+// 	            'excelHtml5',
+// 	            'csvHtml5',
+// 	            'pdfHtml5'
+// 		    ],
+// 		    "retrieve": true
+// 	    });
+// 	});
+</script>
+<script type="text/javascript">
+    TweenMax.set($("#viewContainer"), {marginTop: 50, autoAlpha: 0});
+
+    TweenMax.to($("#viewContainer"), 0.5, {marginTop: 0, autoAlpha: 1, ease:Power2.easeInOut});
+</script>

@@ -1,0 +1,124 @@
+
+<div id="viewContainer" ng-controller="genAttController" id="genAtt" class="container">
+	<br>
+	<div class="card rounded-0 border-0">
+		<div class="card-header text-center card-header-narrow">
+			Generate attendance records
+		</div>
+
+		<div class="row justify-content-center card-body">
+			<div class="col-md-3">
+				<!-- <div class="input-group">
+				  <span class="input-group-addon" id="basic-addon1">From</span>
+				  <input ng-model="fromDate" type="text" id="fromDate" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"
+				  data-format="Y-m-d" data-large-mode="true" data-large-default="true" data-lock="to" data-min-year="2017" data-theme="genAtt-date-theme">
+				</div> -->
+
+				<div class="md-form">
+				    <label for="fromDate">From</label>
+				    <input ng-model="fromDate" type="text" id="fromDate" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"
+				  data-format="Y-m-d" data-large-mode="true" data-large-default="true" data-lock="to" data-min-year="2017" data-theme="genAtt-date-theme">
+				</div>
+
+			</div>
+			<div class="col-md-3">
+				<!-- <div class="input-group">
+				  <span class="input-group-addon" id="basic-addon1">To</span>
+				  <input ng-model="toDate" type="text" id="toDate" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"
+				  data-format="Y-m-d" data-large-mode="true" data-large-default="true" data-lock="to" data-min-year="2017" data-theme="genAtt-date-theme">
+				</div> -->
+
+				<div class="md-form">
+				    <label for="toDate">To</label>
+				    <input ng-model="toDate" type="text" id="toDate" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"
+				  data-format="Y-m-d" data-large-mode="true" data-large-default="true" data-lock="to" data-min-year="2017" data-theme="genAtt-date-theme">
+				</div>
+
+			</div>
+			<div class="col-md-2">
+				<button ng-click="fetchData()" type="button" class="btn btn-success btn-rounded aqua-gradient">Fetch</button>
+			</div>
+     
+		</div>
+
+	</div>
+	<hr>
+
+	<div ng-show="filterData.length > 0" class="card rounded-0 border-0">
+	<div class="row card-body justify-content-center">
+		<nav class="" aria-label="Page navigation example">
+		  <ul class="pagination pag-margin">
+		    <li id="allID" class="page-item active" ng-click="filterValueUpdate('')"><a class="page-link">All
+		    <span class="badge badge-primary">{{ totalCount }}</span>
+		    </a></li>
+    		<li ng-repeat= "x in filterData" id="{{ x.status+'ID' }}" class="page-item" ng-click="filterValueUpdate(x.status)"><a class="page-link">{{ x.status }}
+    			<span class="badge badge-primary">{{ x.count }}</span>
+    		</a></li>
+		  </ul>
+		</nav>
+	</div>
+	</div>			
+
+	<br>
+	<div ng-show="attData.length > 0" class="card rounded-0 border-0">
+		<div class="card-header text-center">
+			Attendance data
+			<div class="pull-right"><button id="excelExport" type="button" class="btn btn-sm btn-outline-light rounded-0">Export</button></div>
+		</div>
+		<div class="card-body">
+		<table datatable="ng" id="attTable" class="table table-hover">
+		  <thead>
+		    <tr>
+		      <th class="border-0">#</th>
+		      <th>ID</th>
+		      <th>Date In</th>
+		      <th>In</th>
+		      <th>Date Out</th>
+		      <th>Out</th>
+		      <th>Status</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr ng-repeat="x in attData| filter:{status : filterValue}">
+		      <td>{{ $index+1 }}</td>
+		      <td>{{ x.ID }}</td>
+		      <td>{{ x.date_in }}</td>
+		      <td>{{ x.att_in }}</td>
+		      <td>{{ x.date_out }}</td>
+		      <td>{{ x.att_out }}</td>
+		      <td ng-if=" x.status == 'Present' " class="text-success"><strong>{{ x.status }}</strong></td>
+		      <td ng-if=" x.status == 'Absent' " class="text-danger"><strong>{{ x.status }}</strong></td>
+		      <td ng-if=" x.status == 'Status unknown' " class="text-warning"><strong>{{ x.status }}</strong></td>
+		      <td ng-if=" x.status == 'Leave' " class="text-primary"><strong>{{ x.status }}</strong></td>
+          <td ng-if=" x.status == 'Weekend' " class="text-primary"><strong>{{ x.status }}</strong></td>
+<!-- 		      <td ng-if=" x.status != 'Leave' && x.status != 'Present' && x.status != 'Absent' && x.status != 'Status unknown' " class="text-danger"><strong>{{ x.status }}</strong></td> -->
+          
+<!--           <td class="text-primary"><strong>{{ x.status }}</strong></td> -->
+          
+		    </tr>
+		  </tbody>
+		</table>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$('#fromDate').dateDropper();
+	$('#toDate').dateDropper();
+// 	$(document).ready(function(){
+// 	    table = $('#attTable').DataTable({
+// 	    	buttons: [
+// 		        'copyHtml5',
+// 	            'excelHtml5',
+// 	            'csvHtml5',
+// 	            'pdfHtml5'
+// 		    ],
+// 		    "retrieve": true
+// 	    });
+// 	});
+</script>
+<script type="text/javascript">
+    TweenMax.set($("#viewContainer"), {marginTop: 50, autoAlpha: 0});
+
+    TweenMax.to($("#viewContainer"), 0.5, {marginTop: 0, autoAlpha: 1, ease:Power2.easeInOut});
+</script>

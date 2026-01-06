@@ -1,0 +1,192 @@
+<div id="viewContainer" ng-controller="schedulerController" id="" class="container">
+  <div class="col text-center primary-bg">
+		<br><br><br><br><br>
+	</div>
+
+	<br>
+  
+	<br>
+  <div class="card rounded-0">
+    <div class="card-header text-center">
+			Appointment Scheduler
+		</div>
+    
+    <div class="card-body">
+      <div class="row align-items-end justify-content-center">
+        
+        <div class="col-lg-3">
+           <div class="md-form">
+            <input ng-model="tearsheetName" type="text" class="form-control" id="tearsheetID">
+            <label for="tearsheetID">Tearsheet name</label>
+          </div>
+        </div>
+        
+        <div class="col-l-3g">
+          <div class="md-form">
+            <input ng-model="candidateID" type="text" class="form-control" id="candidateID">
+            <label for="candidateID">Candidate IDs</label>
+          </div>
+        </div>
+
+        <div class="col-lg-2">
+          <button ng-click="getByTearsheet(); getByCandidateID()" type="button" class="btn btn-rounded btn-success btn-sm">Fetch</button>
+        </div>
+        
+      </div>
+      
+      <hr>
+      
+      <table class="info-table">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+<!--           <th>From</th> -->
+<!--           <th>action</th> -->
+        </tr>
+        <tr ng-repeat="a in tableData">
+          <td><button ng-click="removeFromTable($index, tableData)" type="button" class="btn btn-danger btn-rounded btn-sm btn-table">X</button>
+            &nbsp;{{a.id}}
+          </td>
+          <td>{{a.firstName+' '+a.lastName}}</td>
+          <td>{{a.email}}</td>
+<!--           <td>Tearsheet</td> -->
+<!--           <td>action</td> -->
+        </tr>
+       
+        <tr ng-show="showManual">            
+          <td>
+            <div class="md-form">
+              <input ng-model="manAdd.id" type="text" class="form-control" id="man_BHID">
+              <label for="man_BHID">Bullhorn ID</label>
+            </div>
+          </td>
+          
+          <td>
+            <div class="row">
+              
+              <div class="col">
+                <div class="md-form">
+                  <input ng-model="manAdd.firstName" type="text" class="form-control" id="man_fname">
+                  <label for="man_fname">First name</label>
+                </div>
+              </div>
+              
+              <div class="col">
+                <div class="md-form">
+                  <input ng-model="manAdd.lastName" type="text" class="form-control" id="man_lname">
+                  <label for="man_lname">Last name</label>
+                </div>
+              </div>
+              
+            </div>
+          </td>
+          
+          <td>
+            <div class="md-form">
+              <input ng-model="manAdd.email" type="text" class="form-control" id="man_email">
+              <label for="man_email">Email</label>
+            </div>
+          </td>
+          
+          <td>
+            <input ng-click="addManual()" type="button" class="btn btn-success btn-rounded btn-sm btn-table" value="Add">
+            <input ng-click="cancelManual()" type="button" class="btn btn-danger btn-rounded btn-sm btn-table" value="X">
+          </td>
+        </tr>
+        
+        <tr ng-if="tableData.length == 0">
+          <td colspan="3">
+            <p class="text-center">No data, please add from tearsheet, candidate ID or manually</p>
+          </td>
+        </tr>
+      </table>
+      
+      <button ng-click="showManual = true" type="button" class="btn btn-primary btn-sm btn-table">Add Candidate</button>
+      <button ng-click="tableData = []" type="button" class="btn btn-primary btn-sm btn-table">Clear</button>
+
+      <!-- Scheduler content -->
+
+      <span ng-show="tableData.length>0">
+      <br><br>
+      <hr>
+      <br>
+      <div class="row">
+        
+        <div class="col-lg">
+
+          <div class="md-form">
+            <input ng-model="subject" type="text" class="form-control" id="subject">
+            <label for="man_email">Title</label>
+          </div>
+          <br>
+          <div class="md-form">
+            <label for="desc" class="active">Description</label>
+            <textarea ng-model="desc" class="md-textarea form-control" id="desc" rows="10"></textarea>
+          </div>
+
+        </div>
+        <div class="col-lg">
+          <table class="info-table">
+            <tr>
+              <th>Questions</th>
+              <th>Type</th>
+            </tr>
+
+            <tr ng-repeat="a in quesArray">
+              <td>
+                <button ng-click="removeFromTable($index, quesArray)" type="button" class="btn btn-danger btn-rounded btn-sm btn-table">X</button>
+                {{ a.q }}
+              </td>
+              <td>
+                {{ a.t }}
+              </td>
+            </tr>
+            
+          </table>
+
+          <form ng-submit="addQues()">
+          <div class="row align-items-end justify-content-center">
+            
+              <div class="col-lg">
+                <div class="md-form">
+                  <input ng-model="addQuestion" type="text" class="form-control" id="addQues" required>
+                  <label for="addQues">Question</label>
+                </div>
+              </div>
+
+              <div class="col-lg-3">
+                <div class="form-group" style="margin-bottom : -16px">
+                  <select ng-model="addQuesType" class="form-control material-select" ng-dropdown>
+                    <option value="text" selected>Text</option>
+                    <option value="boolean">Yes/No</option>
+                  </select>
+                  <small class="form-text text-muted">Type of question</small>
+                </div>
+              </div>
+
+            </div>
+
+            <input type="submit" class="btn btn-primary btn-sm" value="Add" />
+          
+        </div>
+        </form>
+      </div>
+      
+      <br><br>
+      <div class="row justify-content-center">
+        <div class="col-3">
+            <input ng-click="sendRequest()" type="button" class="btn btn-primary btn-success btn-rounded" value="Send Request(s)" />
+        </div>
+      </div>
+    </span>
+
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    TweenMax.set($("#viewContainer"), {marginTop: 50, autoAlpha: 0});
+
+    TweenMax.to($("#viewContainer"), 0.5, {marginTop: 0, autoAlpha: 1, ease:Power2.easeInOut});
+</script>
