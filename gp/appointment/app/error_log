@@ -1,0 +1,14 @@
+[21-Mar-2019 19:53:23 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: file does not exist in /home/lobalpun/public_html/portal/vendor/google/apiclient/src/Google/Client.php:859
+Stack trace:
+#0 /home/lobalpun/public_html/portal/scheduler/free.php(8): Google_Client->setAuthConfig('credentials.jso...')
+#1 /home/lobalpun/public_html/portal/scheduler/free.php(54): getClient()
+#2 /home/lobalpun/public_html/gp/appointment/app/checkFree.php(19): getBusyFree('ash@globalpundi...', '2019-03-27T08:0...', '2019-03-27T19:0...')
+#3 {main}
+  thrown in /home/lobalpun/public_html/portal/vendor/google/apiclient/src/Google/Client.php on line 859
+[21-Mar-2019 19:56:11 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: file does not exist in /home/lobalpun/public_html/portal/vendor/google/apiclient/src/Google/Client.php:859
+Stack trace:
+#0 /home/lobalpun/public_html/portal/scheduler/free.php(9): Google_Client->setAuthConfig('credentials.jso...')
+#1 /home/lobalpun/public_html/portal/scheduler/free.php(55): getClient()
+#2 /home/lobalpun/public_html/gp/appointment/app/checkFree.php(19): getBusyFree('ash@globalpundi...', '2019-03-25T08:0...', '2019-03-25T19:0...')
+#3 {main}
+  thrown in /home/lobalpun/public_html/portal/vendor/google/apiclient/src/Google/Client.php on line 859

@@ -1,0 +1,118 @@
+<div class="container" ng-controller="mainCtrl"  style="padding: 0px" ng-cloak>
+  <md-card ng-show="resData.length==0" ng-cloak>
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">Invalid Appointment ID</span>
+      </md-card-title-text>
+    </md-card-title>
+
+    <md-card-content>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis optio aliquid quod eligendi repellat neque magnam minus. Ad doloremque, error fuga nihil ab molestiae unde laboriosam, cum voluptas doloribus quaerat assumenda, quis sequi illo itaque fugit excepturi! Dolorum, maiores commodi temporibus dolores sapiente perspiciatis accusamus nobis odit earum et adipisci.
+      </p>
+    </md-card-content>
+    
+  </md-card>
+
+  <md-card ng-show="resData.length>0" ng-cloak>
+
+    <md-tabs md-center-tabs md-dynamic-height md-selected="selectedIndex">
+      <md-tab label="Step 1" ng-disabled="showConfirm">
+
+        <div class="row justify-content-center md-padding">
+          <div class="col-lg-4">
+            <h3 class="no-break">Select your convinient date</h3>
+            <md-calendar ng-model="startDate" md-min-date="minDate" md-date-filter="onlyWeekdays" md-max-date="maxDate" ng-click="calendarClick()"></md-calendar>
+          </div>
+
+          <div ng-class="divClass" ng-show="divClass != 'hideCol'">
+            <h3 class="no-break">Select your convinient time</h3>
+            <md-subheader>Your time zone is <strong>{{localTimeZone}}</strong></md-subheader>
+            
+            <div class="row justify-content-around">
+              <md-progress-linear ng-show="!showTimes" md-mode="query" class="md-primary"></md-progress-linear>
+              <div ng-class="divClass" ng-show="showTimes">
+                <md-list ng-cloak>
+                  <md-list-item ng-repeat="a in morningHours" class="md-2-line" ng-click="selectDate(a)" ng-disabled="checkBusy(a)" md-colors="checkBusy(a) ? {background: 'warn-200'} : ''">
+                    <div class="md-list-item-text" layout="column">
+                      <h4>{{ timeZone(a) }}</h4>
+                      <p>between 8-9 AM</p>
+                    </div>
+                    <md-divider ng-if="!$last"></md-divider>
+                  </md-list-item>
+                </md-list>
+              </div>
+              
+              <div ng-class="divClass" ng-show="showTimes">
+                <md-list ng-cloak>
+                  <md-list-item ng-repeat="a in noonHours" class="md-2-line" ng-click="selectDate(a)" ng-disabled="checkBusy(a)" md-colors="checkBusy(a) ? {background: 'warn-200'} : ''">
+                    <div class="md-list-item-text" layout="column">
+                      <h4>{{ timeZone(a) }}</h4>
+                      <p>between 8-9 AM</p>
+                    </div>
+                    <md-divider ng-if="!$last"></md-divider>
+                  </md-list-item>
+                </md-list>
+              </div>
+              
+            </div>
+          </div>
+         
+        </div>
+
+      </md-tab>
+      
+      <md-tab label="Step 2" ng-disabled="!selectedDate || showConfirm">
+        <md-content class="md-padding">
+           <h3>Please answer the below questions (Optional)</h3>
+           <md-subheader class="md-primary"><strong>You've selected - {{localStartTime}}</md-subheader>
+        </md-content>
+
+        <form ng-submit="fixAppointment()">
+          <table class="questions-table">
+            <tr ng-repeat="a in resData[0].questions">
+              <td valign="middle" class="w-30">
+                {{a.q}}
+              </td>
+              <td valign="middle" class="">
+              <md-input-container ng-if="a.t == 'text'" class="md-block">
+                <label>Answer</label>
+                <textarea ng-model="a.a" md-maxlength="150" rows="2" md-select-on-focus autocomplete="nope"></textarea>
+              </md-input-container>
+
+              <md-radio-group ng-if="a.t == 'boolean'" layout="row" ng-model="a.a">
+                <md-radio-button value="yes" class="md-primary">Yes</md-radio-button>
+                <md-radio-button value="no"> No </md-radio-button>
+              </md-radio-group>
+              </td>
+            </tr>
+          </table>
+
+          <md-card-actions layout="row" layout-align="end center">
+            <md-button type="submit" class="md-primary md-raised" ng-click="setApp()">Fix Appointment</md-button>
+          </md-card-actions>
+          
+        </form>
+      </md-tab>
+      
+      <md-tab label="Confirmation" ng-disabled="!showConfirm">
+        <md-card md-colors="{background: 'primary-500'}">
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">You are all set up!</span><br>
+              <md-subheader md-colors="{background: 'primary-800'}">See you on {{localStartTime}}, You will be notified 30 mins before the appointment start time</md-subheader>           
+            </md-card-title-text>
+          </md-card-title>
+          <md-card-content>
+            
+          </md-card-content>
+          <md-card-actions layout="row" layout-align="end center">
+            <md-button>Close</md-button>
+          </md-card-actions>
+        </md-card>
+      </md-tab>
+    </md-tabs>
+  
+  </md-card>
+  
+</div>

@@ -1,0 +1,56 @@
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-app="myApp" ng-cloak>
+  <div class="container-fluid no-padding" ng-controller="indexCtrl">
+    <md-toolbar md-colors="{background: 'primary-800'}" md-whiteframe="3">      
+      <div class="navBar-left">
+<!--         <md-icon ng-show="!$mdMedia('gt-sm')" class="navBar-text" ng-click="toggleLeft()" style="line-height: 20px;">menu</md-icon> -->
+        <span style="font-size: 24px; line-height: 64px; margin-left: 20px">Globalpundits Appointment Scheduler</span>
+      </div>
+
+      <div class="navBar-right">
+        <md-icon class="navBar-text" ng-click="darkTheme()" style="font-size: 26px">brightness_medium</md-icon>
+        
+      </div>
+    </md-toolbar>
+
+    <section layout="row" flex>  
+
+      <md-content flex>
+<!--         <md-progress-linear md-mode="query" class="md-primary"></md-progress-linear> -->
+        
+      </md-content>
+    </section>
+  </div>
+  <div class="container-fluid" style="padding: 0px"> 
+    <ui-view></ui-view>
+  </div>
+  
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-messages.min.js"></script>
+  <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="js/moment-timezone-with-data.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script>
+  <script src="js/functions.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/indexController.js"></script>
+  <script src="js/mainCtrl.js"></script>
+
+
+
+</body>
+</html>
