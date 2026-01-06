@@ -1,0 +1,2 @@
+$('#fromDate').dateDropper();
+$('#toDate').dateDropper();
