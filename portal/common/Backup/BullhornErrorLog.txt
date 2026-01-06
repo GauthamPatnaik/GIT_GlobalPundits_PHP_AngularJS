@@ -1,0 +1,29 @@
+
+
+Logged: [06-12-2022 03:35:02] - AuthCode: 9058_5533967_31:4a0c3888-200b-4f66-b885-f60dc47f47df, 
+
+
+Logged: [06-12-2022 03:35:02] - Auth: {
+  "access_token" : "9058_5533967_31:4424d055-c2b5-41b3-bda3-9ce884416d2e",
+  "token_type" : "Bearer",
+  "expires_in" : 600,
+  "refresh_token" : "9058_5533967_31:dad914f9-227a-4158-b832-2a825d9d6ed3"
+}, 
+
+
+Logged: [06-12-2022 03:35:03] - Login : Array
+(
+    [BhRestToken] => 9058_5533967_e7cec6b4-1eb2-490e-8c61-e3bc2ef60827
+    [restUrl] => https://rest31.bullhornstaffing.com/rest-services/1cuk5g/
+)
+, 
+
+
+Logged: [06-12-2022 03:35:04] - Login : Array
+(
+    [BhRestToken] => 9058_5533967_0a82680f-9de6-4f74-9cad-213ec7edf2c1
+    [restUrl] => https://rest31.bullhornstaffing.com/rest-services/1cuk5g/
+)
+, 
+
+
