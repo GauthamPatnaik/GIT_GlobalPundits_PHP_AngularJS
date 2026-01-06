@@ -1,0 +1,2 @@
+[20-Dec-2019 17:14:55 UTC] PHP Recoverable fatal error:  Object of class mysqli_stmt could not be converted to string in /home/lobalpun/public_html/portal/onboard/mox/mox_template.php on line 483
+[06-Nov-2021 18:22:04 UTC] PHP Catchable fatal error:  Object of class mysqli_stmt could not be converted to string in /home/lobalpun/public_html/portal/onboard/mox/mox_template.php on line 483

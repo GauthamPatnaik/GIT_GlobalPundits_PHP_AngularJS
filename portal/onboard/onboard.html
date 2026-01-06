@@ -1,0 +1,276 @@
+<div class="row">
+	<div class="col text-center primary-bg">
+		<br><br><br><br><br>
+	</div>
+</div>
+
+<div id="viewContainer" id="onboarding" ng-controller="onboardingController" class="container">
+	<div class="card rounded-0 border-0">
+	  <div class="card-body">
+	    <h3 class="text-center">Client Onboarding Documents</h3>
+	  </div>
+	</div>
+	<br>
+
+	<div ng-hide="hasPermission" class="alert alert-primary text-center" role="alert">
+		You are not authorized to view this page
+	</div>
+
+	<div ng-show="hasPermission" class="card rounded-0 border-0">
+	  <div class="card-body">
+	  	<form ng-submit="onboardSubmit()">
+
+	  	<div class="row justify-content-md-center align-items-center">
+	  		<div class="col-3">
+	  			<div class="form-group">
+				    <!-- <label for="clientName"></label> -->
+				    <select ng-model="clientName" class="form-control material-select" id="clientName" ng-dropdown>
+				      <option value="" disabled selected>Select client</option>
+				      <option value="xylem">Xylem Sensus</option>
+				      <option value="srns">SRNS</option>
+				      <option value="bcbs">BCBS</option>
+				      <option value="mox">MOX</option>
+				      <option value="gp">Globalpundits</option>
+				      <option value="aflac">Aflac</option>                                                                                                                                               
+				    </select>
+				    <!-- <small id="clientHelp" class="form-text text-muted">Client's name from Bullhorn</small> -->
+				</div>
+			</div>
+			<div class="col-3">
+	  			<!-- <div class="form-group">
+				    <label for="candidateID">Candidate ID</label>
+				    <input ng-model="candidateID" type="text" class="form-control" id="candidateID" aria-describedby="idHelp">
+				    <small id="idHelp" class="form-text text-muted">Bullhorn candidate ID</small>
+				</div> -->
+				<div class="md-form">
+				    <input ng-model="candidateID" type="text" class="form-control" id="candidateID">
+				    <label for="candidateID">Placement ID</label>
+				</div>
+	  		</div>
+	  		<div class="col-2">
+		  		<button type="submit" class="btn btn-success btn-rounded aqua-gradient">Send</button>
+		  	</div>
+	  	</div>
+
+	  	</form>
+
+	  	<span ng-show="showFields">
+	  	<hr>
+	  	<h4 class="text-center">Onboarding Documents Fields</h4>
+	  	<br>
+	  		<form ng-submit="sendEnvelope()" id="offerForm">
+	  		<div class="row justify-content-md-center rounded">
+	  			<div class="col-4 border-right border-primary">
+	  				<div class="md-form">
+					    <label for="cName" ng-class="{active: respData.name != undefined}">Candidate Name</label>
+					    <input ng-model="respData.name" type="text" class="form-control" id="cName" required="true">
+					</div>
+
+					<div class="md-form">
+					    <label for="cEmail" ng-class="{active: respData.email != undefined}">Candidate Email</label>
+					    <input ng-model="respData.email" type="text" class="form-control active" id="cEmail" required="true">
+					</div>
+
+					<div class="md-form">
+					    <label for="cPhone" ng-class="{active: respData.phone != undefined}">Candidate phone</label>
+					    <input ng-model="respData.phone" type="text" class="form-control" id="cPhone">
+					</div>
+
+					<span ng-if="clientName == 'xylem'">
+
+						<p class="text-center text-primary">Xylem Specific Fields</p>
+
+		  				<div class="md-form">
+						    <label for="clientLocation">Client location</label>
+						    <input ng-model="respData.clientLocation" type="text" class="form-control" required="true" name="clientLocation" id="clientLocation">
+						</div>
+
+						<div class="md-form">
+						    <label for="GPLocation">GP location</label>
+						    <input ng-model="respData.GPLocation" type="text" class="form-control" required="true" id="GPLocation" name="GPLocation">
+						</div>
+					</span>
+
+					<span ng-if="clientName == 'srns'">
+
+						<p class="text-center text-primary">SRNS Specific Fields</p>
+
+						<div ng-show="clientName == 'srns'" class="md-form">
+						    <label for="subConNum">Sub Contract Number</label>
+						    <input ng-model="respData.subConNum" type="text" class="form-control" required="true" id="subConNum" name="subConNum">
+						</div>
+					</span>
+
+					<span ng-if="clientName == 'bcbs'">
+
+						<p class="text-center text-primary">BCBS Specific Fields</p>
+
+						<div class="md-form">
+						    <label for="bcbsID">BCBS ID</label>
+						    <input ng-model="respData.bcbsID" type="text" class="form-control" required="true" id="bcbsID" name="bcbsID">
+						</div>
+
+						<!-- <div class="md-form">
+						    <label for="bcbsManager">Manager</label>
+						    <input ng-model="respData.manager" type="text" class="form-control" required="true" id="bcbsManager" name="bcbsManager">
+						</div> -->
+
+						<div class="md-form">
+						    <label for="bcbsDIV">Div</label>
+						    <input ng-model="respData.div" type="text" class="form-control" required="true" id="bcbsDIV" name="bcbsDIV">
+						</div>
+
+						<div class="md-form">
+						    <label for="bcbsCC">CC</label>
+						    <input ng-model="respData.cc" type="text" class="form-control" required="true" id="bcbsCC" name="bcbsCC">
+						</div>
+
+						<!--<div class="md-form">
+						    <label for="bcbsLocation">Location</label>
+						    <input ng-model="respData.location" type="text" class="form-control" required="true" id="bcbsLocation" name="bcbsLocation">
+						</div>-->
+
+
+						<div class="md-form">
+						    <label for="bcbsTitle">Title</label>
+						    <input ng-model="respData.title" type="text" class="form-control" id="bcbsTitle" name="bcbsTitle">
+						</div>
+
+						<!--<div class="md-form">
+						    <label for="bcbsCompany">Company</label>
+						    <input ng-model="respData.company" type="text" class="form-control" id="bcbsCompany" name="bcbsCompany">
+						</div>-->
+
+
+						<div class="md-form">
+						    <label for="bcbsDueDate" ng-class="{active: respData.gpOfferStartDate != ''}">Due date</label>
+						    <input ng-model="respData.gpOfferStartDate" type="text" class="form-control" id="bcbsDueDate" name="bcbsDueDate">
+						</div>
+					</span>
+
+					<span ng-if="clientName == 'mox'">
+
+						<p class="text-center text-primary">MOX Specific Fields</p>
+
+						<div class="md-form">
+						    <label for="moxGETDate">GET Training Date</label>
+						    <input ng-model="respData.moxGETDate" type="text" class="form-control" required="true" id="moxGETDate" name="moxGETDate">
+						</div>
+
+						<div class="md-form">
+						    <label for="bcbsManager">Length of Assignment</label>
+						    <input ng-model="respData.moxLoA" type="text" class="form-control" required="true" id="moxLoA" name="moxLoA">
+						</div>
+
+						<div class="md-form">
+						    <label for="moxReqNum">Mox Req #</label>
+						    <input ng-model="respData.moxReqNum" type="text" class="form-control" required="true" id="moxReqNum" name="moxReqNum">
+						</div>
+
+					</span>
+	  			</div>
+
+	  			<div class="col-4 border-right border-primary border-right border border-top-0 border-bottom-0 border-secondary">
+	  				
+	  				<p class="text-center text-primary">Globalpundits Specific Fields</p>
+
+	  			<div class="md-form">
+					    <label for="gpF1">Job Title</label>
+					    <input ng-model="respData.gpOfferJobTitle" type="text" class="form-control" id="gpF1" required="true">
+					</div>
+
+					<div class="md-form">
+					    <label for="gpF2" ng-class="{active: respData.gpOfferStartDate != ''}">Start Date</label>
+					    <input ng-model="respData.gpOfferStartDate" type="text" class="form-control" id="gpF2" required="true">
+					</div>
+
+					<div class="md-form">
+					    <label for="gpF3">Client Assignment</label>
+					    <input ng-model="respData.gpOfferClientAssignment" type="text" class="form-control" id="gpF3" required="true">
+					</div>
+
+					<div class="md-form">
+					    <label for="gpF4">Work Location</label>
+					    <input ng-model="respData.gpOfferWorkLocation" type="text" class="form-control" id="gpF4" required="true">
+					</div>
+
+					<div class="md-form">
+					    <label for="gpF5">W-2 Straight/Overtime Pay rate</label>
+					    <input ng-model="respData.gpOfferOvertime" type="text" class="form-control" id="gpF5" required="true">
+					</div>
+
+					<div class="md-form">
+					    <label for="gpF6">Exemption Status</label>
+					    <input ng-model="respData.gpOfferExemptionStatus" type="text" class="form-control" id="gpF6" required="true">
+					</div>
+
+					<div class="md-form">
+					    <label for="gpF7">Eligibility for PTO/Vacation</label>
+					    <input ng-model="respData.gpOfferVacation" type="text" class="form-control" id="gpF7" required="true">
+					</div>
+
+					<div class="md-form">
+					    <label for="gpF8">Eligibility for Holidays</label>
+					    <input ng-model="respData.gpOfferHolidays" type="text" class="form-control" id="gpF8" required="true">
+					</div>
+
+					<div class="md-form">
+					    <label for="gpF9">Eligibility Health, Dental, Life, Disability, 401k</label>
+					    <input ng-model="respData.gpOfferDental" type="text" class="form-control" id="gpF9" required="true">
+					</div>
+          
+          <div class="form-check">
+              <label class="form-check-label" for="isPerDiem" style="padding-left: 0px;">PerDiem Eligible?</label>
+              <input ng-model="respData.isPerDiem" type="checkbox" class="form-check-input" id="isPerDiem" style="margin-left: 10px !important;margin-top: 6px;">
+          </div>
+            
+          <span ng-if="respData.isPerDiem">
+
+						<p class="text-center text-primary">PerDiem Specific Fields</p>
+
+						<div class="md-form">
+						    <label for="moxGETDate">Principal Place of Business Address</label>
+						    <input ng-model="respData.gpPerDiemPrincipalPlaceOfBusiness" type="text" class="form-control" required="true" id="moxGETDate" name="moxGETDate">
+						</div>
+
+						<div class="md-form">
+						    <label for="bcbsManager">GP Contact Person</label>
+						    <input ng-model="respData.gpPerDiemTempContactPerson" type="text" class="form-control" required="true" id="moxLoA" name="moxLoA">
+						</div>
+					</span>
+            
+	  			</div>
+          
+          <div class="col-4">
+            
+	  				<div class="md-form">
+					    <label for="docuSignSubject" class="active">Email Subject</label>
+					    <input ng-model="docuSignSubject" type="text" class="form-control" id="docuSignSubject">
+					  </div>
+
+            <div class="md-form">
+                <label for="docusignMailBody" class="active">Email Body</label>
+                <textarea ng-model="docuSignMailBody" class="md-textarea form-control" id="docusignMailBody"></textarea>
+            </div>
+            
+            <br>
+            <tags-input ng-model="envCC" placeholder="CC" add-on-space="true" allowed-tags-pattern="^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$"></tags-input>            
+
+            <button type="submit" class="btn btn-success btn-rounded aqua-gradient">Send Documents</button>
+	  			</div>
+	  		</div>
+	  		</form>
+	  	</span>
+	  </div>
+	</div>
+
+	<br>
+	<div ng-show="proccessingTextFlag" id="proccessingText" class="alert alert-primary text-center" role="alert">
+		Placeholder
+	</div>
+</div>
+<script type="text/javascript">
+    TweenMax.set($("#viewContainer"), {marginTop: 50, autoAlpha: 0});
+
+    TweenMax.to($("#viewContainer"), 0.5, {marginTop: 0, autoAlpha: 1, ease:Power2.easeInOut});
+</script>

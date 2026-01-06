@@ -1,0 +1,85 @@
+<div id="viewContainer" id="onboardingStatus" ng-controller="onboardingStatusController" class="container">
+	<div class="col text-center primary-bg">
+		<br><br><br><br><br>
+	</div>
+
+	<br>
+
+<br>
+<div class="card rounded-0 border-0">
+	<div class="card-header text-center">
+		Onboarding Status
+		<a ng-click="refreshStatus()" class="badge badge-primary pill-bg float-right"><i class="fa fa-sync-alt" aria-hidden="true"></i>&nbsp; Refresh</a>
+	</div>
+  
+<!--   Change start -->
+  <br>
+  <div class="card-body card-body-table">
+    <table datatable="ng" id="onboardingStatusTable" class="table table-hover">
+		  <thead>
+		    <tr>
+		      <th>BHID</th>
+          <th>Name</th>
+          <th>Client</th>
+          <th>Email</th>
+          <th>Sent by</th>
+          <th>Last upd</th>
+		      <th>Status</th>
+          <th>Action</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr ng-repeat="a in respData1">
+          <td>{{ a.bhID }}</td>
+          <td>{{ a.name }}</td>
+          <td>{{ a.client }}</td>
+          <td>{{ a.mailID }}</td>
+          <td ng-click="empName(a.sentby)">{{ a.sentby }}</td>
+          <td>{{ a.stime }}</time> </td>
+          <td>
+            <span ng-if=" a.estatus == 'Init' " class="badge badge-pill light-blue pill-bg">{{ a.estatus }}</span>
+            <span ng-if=" a.estatus == 'Sent' " class="badge badge-pill indigo pill-bg">{{ a.estatus }}</span>
+            <span ng-if=" a.estatus == 'Delivered' " class="badge badge-pill purple pill-bg">{{ a.estatus }}</span>
+            <a ng-if=" a.estatus == 'Completed' " href="eventNotification/{{a.envelopeID}}.zip"><span ng-if=" a.estatus == 'Completed' " class="badge badge-pill green pill-bg">{{ a.estatus }}</span></a>
+            <span ng-if=" a.estatus == 'Voided' " class="badge badge-pill pink pill-bg">{{ a.estatus }}</span>
+            <span ng-if=" a.estatus == 'Declined' " class="badge badge-pill pink pill-bg">{{ a.estatus }}</span>
+          </td>
+          <td class="width-100">
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary dropdown-toggle btn-rounded btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Action
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" ng-click="sendMailer(a.mailID)">
+                  <i class="far fa-envelope"></i>&nbsp;&nbsp;Send E-Mail
+                </a>
+                <a class="dropdown-item"  ng-click="textBox(a.name, a.phone)">
+                  <i class="far fa-comment"></i>&nbsp;&nbsp;Send Message
+                </a>
+                <a class="dropdown-item" ng-click="resendEnvelope(a.envelopeID,a.name,a.mailID)">
+                  <i class="fas fa-redo"></i>&nbsp;&nbsp;Resend Envelope
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item dropdown-warn" ng-click="voidEnvelope(a.envelopeID)">
+                  <i class="fas fa-ban"></i>&nbsp;&nbsp;Void Envelope
+                </a>
+              </div>
+            </div>
+          </td>
+        </tr>  
+		  </tbody>
+		</table>
+  </div>
+<!--   Change end -->
+  <br>
+	
+	<span ng-show="showRefresh"><br><p class="text-center">Refreshing</p></span>
+</div>
+  
+</div>
+
+<script type="text/javascript">
+    TweenMax.set($("#viewContainer"), {marginTop: 50, autoAlpha: 0});
+
+    TweenMax.to($("#viewContainer"), 0.5, {marginTop: 0, autoAlpha: 1, ease:Power2.easeInOut});
+</script>

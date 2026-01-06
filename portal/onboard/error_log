@@ -1,0 +1,123 @@
+[04-Jun-2018 20:24:11 UTC] PHP Parse error:  syntax error, unexpected 'curl_setopt_array' (T_STRING) in /home/ckqotimy/public_html/portal/common/bullhorn.lib.php on line 82
+[04-Jun-2018 20:25:25 UTC] PHP Parse error:  syntax error, unexpected 'curl_setopt_array' (T_STRING) in /home/ckqotimy/public_html/portal/common/bullhorn.lib.php on line 82
+[04-Jun-2018 20:26:44 UTC] PHP Parse error:  syntax error, unexpected 'curl_setopt_array' (T_STRING) in /home/ckqotimy/public_html/portal/common/bullhorn.lib.php on line 82
+[04-Jun-2018 20:28:17 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/ckqotimy/public_html/portal/onboard/bull.php on line 36
+[04-Jun-2018 20:29:44 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/ckqotimy/public_html/portal/onboard/bull.php on line 36
+[04-Jun-2018 20:31:12 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/ckqotimy/public_html/portal/onboard/bull.php on line 36
+[04-Jun-2018 20:32:04 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/ckqotimy/public_html/portal/onboard/bull.php on line 36
+[04-Jun-2018 20:33:14 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/ckqotimy/public_html/portal/onboard/bull.php on line 36
+[04-Jun-2018 20:37:20 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/ckqotimy/public_html/portal/onboard/bull.php on line 36
+[04-Jun-2018 20:38:52 UTC] PHP Parse error:  syntax error, unexpected 'curl_setopt_array' (T_STRING) in /home/ckqotimy/public_html/portal/common/bullhorn.lib.php on line 82
+[04-Jun-2018 20:39:48 UTC] PHP Parse error:  syntax error, unexpected 'curl_setopt_array' (T_STRING) in /home/ckqotimy/public_html/portal/common/bullhorn.lib.php on line 82
+[04-Jun-2018 20:40:34 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/ckqotimy/public_html/portal/onboard/bull.php on line 36
+[04-Jun-2018 20:41:06 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/ckqotimy/public_html/portal/onboard/bull.php on line 38
+[04-Jun-2018 20:43:09 UTC] PHP Parse error:  syntax error, unexpected 'curl_setopt_array' (T_STRING) in /home/ckqotimy/public_html/portal/common/bullhorn.lib.php on line 82
+[25-Jul-2018 07:23:40 UTC] PHP Warning:  include(../../common/db.lib.php): failed to open stream: No such file or directory in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 2
+[25-Jul-2018 07:23:40 UTC] PHP Warning:  include(): Failed opening '../../common/db.lib.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 2
+[25-Jul-2018 07:23:40 UTC] PHP Warning:  include(../../common/session.php): failed to open stream: No such file or directory in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 3
+[25-Jul-2018 07:23:40 UTC] PHP Warning:  include(): Failed opening '../../common/session.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 3
+[25-Jul-2018 07:23:40 UTC] PHP Warning:  include(../../common/docusign.lib.php): failed to open stream: No such file or directory in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 4
+[25-Jul-2018 07:23:40 UTC] PHP Warning:  include(): Failed opening '../../common/docusign.lib.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 4
+[25-Jul-2018 07:23:40 UTC] PHP Warning:  include(../../common/onboarding_status.lib.php): failed to open stream: No such file or directory in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 5
+[25-Jul-2018 07:23:40 UTC] PHP Warning:  include(): Failed opening '../../common/onboarding_status.lib.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 5
+[25-Jul-2018 07:23:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function checkSession() in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 13
+[25-Jul-2018 07:25:51 UTC] PHP Warning:  include(../../common/db.lib.php): failed to open stream: No such file or directory in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 2
+[25-Jul-2018 07:25:51 UTC] PHP Warning:  include(): Failed opening '../../common/db.lib.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 2
+[25-Jul-2018 07:25:51 UTC] PHP Warning:  include(../../common/session.php): failed to open stream: No such file or directory in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 3
+[25-Jul-2018 07:25:51 UTC] PHP Warning:  include(): Failed opening '../../common/session.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 3
+[25-Jul-2018 07:25:51 UTC] PHP Warning:  include(../../common/docusign.lib.php): failed to open stream: No such file or directory in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 4
+[25-Jul-2018 07:25:51 UTC] PHP Warning:  include(): Failed opening '../../common/docusign.lib.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 4
+[25-Jul-2018 07:25:51 UTC] PHP Warning:  include(../../common/onboarding_status.lib.php): failed to open stream: No such file or directory in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 5
+[25-Jul-2018 07:25:51 UTC] PHP Warning:  include(): Failed opening '../../common/onboarding_status.lib.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 5
+[25-Jul-2018 07:25:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function checkSession() in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 13
+[25-Jul-2018 07:29:13 UTC] PHP Warning:  include(../../common/db.lib.php): failed to open stream: No such file or directory in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 2
+[25-Jul-2018 07:29:13 UTC] PHP Warning:  include(): Failed opening '../../common/db.lib.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 2
+[25-Jul-2018 07:29:13 UTC] PHP Warning:  include(../../common/session.php): failed to open stream: No such file or directory in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 3
+[25-Jul-2018 07:29:13 UTC] PHP Warning:  include(): Failed opening '../../common/session.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 3
+[25-Jul-2018 07:29:13 UTC] PHP Warning:  include(../../common/docusign.lib.php): failed to open stream: No such file or directory in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 4
+[25-Jul-2018 07:29:13 UTC] PHP Warning:  include(): Failed opening '../../common/docusign.lib.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 4
+[25-Jul-2018 07:29:13 UTC] PHP Warning:  include(../../common/onboarding_status.lib.php): failed to open stream: No such file or directory in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 5
+[25-Jul-2018 07:29:13 UTC] PHP Warning:  include(): Failed opening '../../common/onboarding_status.lib.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 5
+[25-Jul-2018 07:29:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function checkSession() in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 13
+[25-Jul-2018 07:30:28 UTC] PHP Warning:  include(common/db.lib.php): failed to open stream: No such file or directory in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 2
+[25-Jul-2018 07:30:28 UTC] PHP Warning:  include(): Failed opening 'common/db.lib.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 2
+[25-Jul-2018 07:30:28 UTC] PHP Warning:  include(common/session.php): failed to open stream: No such file or directory in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 3
+[25-Jul-2018 07:30:28 UTC] PHP Warning:  include(): Failed opening 'common/session.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 3
+[25-Jul-2018 07:30:28 UTC] PHP Warning:  include(common/docusign.lib.php): failed to open stream: No such file or directory in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 4
+[25-Jul-2018 07:30:28 UTC] PHP Warning:  include(): Failed opening 'common/docusign.lib.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 4
+[25-Jul-2018 07:30:28 UTC] PHP Warning:  include(common/onboarding_status.lib.php): failed to open stream: No such file or directory in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 5
+[25-Jul-2018 07:30:28 UTC] PHP Warning:  include(): Failed opening 'common/onboarding_status.lib.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 5
+[25-Jul-2018 07:30:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function checkSession() in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/ckqotimy/public_html/portal/onboard/docusign_resend.php on line 13
+[17-Nov-2018 17:59:49 UTC] PHP Warning:  include(/home/ckqotimy/public_html/portal/onboard/common/bullhorn.lib.php): failed to open stream: No such file or directory in /home/ckqotimy/public_html/portal/onboard/jobtest.php on line 2
+[17-Nov-2018 17:59:49 UTC] PHP Warning:  include(): Failed opening '/home/ckqotimy/public_html/portal/onboard/common/bullhorn.lib.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/ckqotimy/public_html/portal/onboard/jobtest.php on line 2
+[17-Nov-2018 17:59:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getAuthCode() in /home/ckqotimy/public_html/portal/onboard/jobtest.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/ckqotimy/public_html/portal/onboard/jobtest.php on line 4
+[18-Nov-2018 16:52:39 UTC] PHP Warning:  require(/vendor/autoload.php): failed to open stream: No such file or directory in /home/ckqotimy/public_html/portal/onboard/jobtest.php on line 3
+[18-Nov-2018 16:52:39 UTC] PHP Fatal error:  require(): Failed opening required '/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/ckqotimy/public_html/portal/onboard/jobtest.php on line 3
+[19-Nov-2018 09:47:58 UTC] PHP Fatal error:  Uncaught Error: Class 'Medoo' not found in /home/ckqotimy/public_html/portal/common/db.lib.php:44
+Stack trace:
+#0 /home/ckqotimy/public_html/portal/onboard/jobtest.php(8): medoo('ckqotimy_portal')
+#1 {main}
+  thrown in /home/ckqotimy/public_html/portal/common/db.lib.php on line 44
+[19-Nov-2018 09:48:39 UTC] PHP Parse error:  syntax error, unexpected '*' in /home/ckqotimy/public_html/portal/onboard/jobtest.php on line 10
+[19-Nov-2018 09:49:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'ckqotimy_sadmin'@'localhost' (using password: YES) in /home/ckqotimy/public_html/portal/vendor/catfan/medoo/src/Medoo.php:321
+Stack trace:
+#0 /home/ckqotimy/public_html/portal/common/db.lib.php(53): Medoo\Medoo->__construct(Array)
+#1 /home/ckqotimy/public_html/portal/onboard/jobtest.php(8): medoo('ckqotimy_portal')
+#2 {main}
+  thrown in /home/ckqotimy/public_html/portal/vendor/catfan/medoo/src/Medoo.php on line 321
+[21-Nov-2018 11:35:02 UTC] PHP Parse error:  syntax error, unexpected '++' (T_INC), expecting ')' in /home/ckqotimy/public_html/portal/onboard/jobtest.php on line 39
+[21-Nov-2018 12:00:51 UTC] PHP Fatal error:  Uncaught Error: Call to a member function id() on null in /home/ckqotimy/public_html/portal/onboard/jobtest.php:66
+Stack trace:
+#0 {main}
+  thrown in /home/ckqotimy/public_html/portal/onboard/jobtest.php on line 66
+[02-Apr-2019 20:50:16 UTC] PHP Warning:  file_put_contents(/home/lobalpun/public_html/portal/common/BullhornSession.json): failed to open stream: Permission denied in /home/lobalpun/public_html/portal/common/bullhorn.lib.php on line 186
+[07-Aug-2019 12:59:41 UTC] PHP Warning:  file_put_contents(/home/lobalpun/public_html/portal/common/BullhornSession.json): failed to open stream: Permission denied in /home/lobalpun/public_html/portal/common/bullhorn.lib.php on line 192
+[20-May-2022 17:05:46 UTC] PHP Parse error:  syntax error, unexpected '$can_id' (T_VARIABLE) in /home/lobalpun/public_html/portal/onboard/bull.php on line 10
+[20-May-2022 17:05:52 UTC] PHP Parse error:  syntax error, unexpected '$can_id' (T_VARIABLE) in /home/lobalpun/public_html/portal/onboard/bull.php on line 10
+[31-May-2022 02:35:01 UTC] PHP Warning:  include(/home/lobalpun/public_html/portal/onboard/../topnav.html): failed to open stream: No such file or directory in /home/lobalpun/public_html/portal/onboard/index.php on line 91
+[31-May-2022 02:35:01 UTC] PHP Warning:  include(/home/lobalpun/public_html/portal/onboard/../topnav.html): failed to open stream: No such file or directory in /home/lobalpun/public_html/portal/onboard/index.php on line 91
+[31-May-2022 02:35:01 UTC] PHP Warning:  include(): Failed opening '/home/lobalpun/public_html/portal/onboard/../topnav.html' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/lobalpun/public_html/portal/onboard/index.php on line 91
+[31-May-2022 02:35:01 UTC] PHP Warning:  include(/home/lobalpun/public_html/portal/onboard/../sidenav.html): failed to open stream: No such file or directory in /home/lobalpun/public_html/portal/onboard/index.php on line 96
+[31-May-2022 02:35:01 UTC] PHP Warning:  include(/home/lobalpun/public_html/portal/onboard/../sidenav.html): failed to open stream: No such file or directory in /home/lobalpun/public_html/portal/onboard/index.php on line 96
+[31-May-2022 02:35:01 UTC] PHP Warning:  include(): Failed opening '/home/lobalpun/public_html/portal/onboard/../sidenav.html' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/lobalpun/public_html/portal/onboard/index.php on line 96
+[27-Nov-2022 06:47:19 UTC] PHP Warning:  include(/home/lobalpun/public_html/portal/onboard/../topnav.html): failed to open stream: No such file or directory in /home/lobalpun/public_html/portal/onboard/index.php on line 91
+[27-Nov-2022 06:47:19 UTC] PHP Warning:  include(/home/lobalpun/public_html/portal/onboard/../topnav.html): failed to open stream: No such file or directory in /home/lobalpun/public_html/portal/onboard/index.php on line 91
+[27-Nov-2022 06:47:19 UTC] PHP Warning:  include(): Failed opening '/home/lobalpun/public_html/portal/onboard/../topnav.html' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/lobalpun/public_html/portal/onboard/index.php on line 91
+[27-Nov-2022 06:47:19 UTC] PHP Warning:  include(/home/lobalpun/public_html/portal/onboard/../sidenav.html): failed to open stream: No such file or directory in /home/lobalpun/public_html/portal/onboard/index.php on line 96
+[27-Nov-2022 06:47:19 UTC] PHP Warning:  include(/home/lobalpun/public_html/portal/onboard/../sidenav.html): failed to open stream: No such file or directory in /home/lobalpun/public_html/portal/onboard/index.php on line 96
+[27-Nov-2022 06:47:19 UTC] PHP Warning:  include(): Failed opening '/home/lobalpun/public_html/portal/onboard/../sidenav.html' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/lobalpun/public_html/portal/onboard/index.php on line 96
+[21-Jan-2024 08:31:49 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/lobalpun/public_html/portal/onboard/rtr-bull.php on line 39
+[17-Feb-2024 07:08:01 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/lobalpun/public_html/portal/onboard/rtr-bull.php on line 48
+[17-Jan-2025 01:20:25 Asia/Kolkata] PHP Warning:  file_put_contents(): Only 0 of 202 bytes written, possibly out of free disk space in /home/lobalpun/public_html/portal/common/bullhorn.lib.php on line 255
+[17-Jan-2025 01:20:25 Asia/Kolkata] PHP Warning:  file_put_contents(): Only 0 of 142 bytes written, possibly out of free disk space in /home/lobalpun/public_html/portal/common/bullhorn.lib.php on line 260
+[20-Feb-2025 23:25:38 Asia/Kolkata] PHP Warning:  file_put_contents(): Only 0 of 99 bytes written, possibly out of free disk space in /home/lobalpun/public_html/portal/common/bullhorn.lib.php on line 631
+[20-Feb-2025 23:25:38 Asia/Kolkata] PHP Warning:  file_put_contents(): Only 0 of 245 bytes written, possibly out of free disk space in /home/lobalpun/public_html/portal/common/bullhorn.lib.php on line 631
+[20-Feb-2025 23:25:38 Asia/Kolkata] PHP Warning:  file_put_contents(): Only 0 of 202 bytes written, possibly out of free disk space in /home/lobalpun/public_html/portal/common/bullhorn.lib.php on line 255
+[20-Feb-2025 23:25:38 Asia/Kolkata] PHP Warning:  file_put_contents(): Only 0 of 201 bytes written, possibly out of free disk space in /home/lobalpun/public_html/portal/common/bullhorn.lib.php on line 631
+[20-Feb-2025 23:25:38 Asia/Kolkata] PHP Warning:  file_put_contents(): Only 0 of 142 bytes written, possibly out of free disk space in /home/lobalpun/public_html/portal/common/bullhorn.lib.php on line 260
+[20-Feb-2025 23:25:55 Asia/Kolkata] PHP Warning:  file_put_contents(): Only 0 of 99 bytes written, possibly out of free disk space in /home/lobalpun/public_html/portal/common/bullhorn.lib.php on line 631
+[20-Feb-2025 23:25:55 Asia/Kolkata] PHP Warning:  file_put_contents(): Only 0 of 245 bytes written, possibly out of free disk space in /home/lobalpun/public_html/portal/common/bullhorn.lib.php on line 631
+[20-Feb-2025 23:25:55 Asia/Kolkata] PHP Warning:  file_put_contents(): Only 0 of 202 bytes written, possibly out of free disk space in /home/lobalpun/public_html/portal/common/bullhorn.lib.php on line 255
+[20-Feb-2025 23:25:56 Asia/Kolkata] PHP Warning:  file_put_contents(): Only 0 of 201 bytes written, possibly out of free disk space in /home/lobalpun/public_html/portal/common/bullhorn.lib.php on line 631
+[20-Feb-2025 23:25:56 Asia/Kolkata] PHP Warning:  file_put_contents(): Only 0 of 142 bytes written, possibly out of free disk space in /home/lobalpun/public_html/portal/common/bullhorn.lib.php on line 260
+[20-Feb-2025 23:35:13 Asia/Kolkata] PHP Warning:  file_put_contents(): Only 0 of 99 bytes written, possibly out of free disk space in /home/lobalpun/public_html/portal/common/bullhorn.lib.php on line 631
+[20-Feb-2025 23:35:13 Asia/Kolkata] PHP Warning:  file_put_contents(): Only 0 of 245 bytes written, possibly out of free disk space in /home/lobalpun/public_html/portal/common/bullhorn.lib.php on line 631
+[20-Feb-2025 23:35:13 Asia/Kolkata] PHP Warning:  file_put_contents(): Only 0 of 202 bytes written, possibly out of free disk space in /home/lobalpun/public_html/portal/common/bullhorn.lib.php on line 255
+[20-Feb-2025 23:35:14 Asia/Kolkata] PHP Warning:  file_put_contents(): Only 0 of 201 bytes written, possibly out of free disk space in /home/lobalpun/public_html/portal/common/bullhorn.lib.php on line 631
+[20-Feb-2025 23:35:14 Asia/Kolkata] PHP Warning:  file_put_contents(): Only 0 of 142 bytes written, possibly out of free disk space in /home/lobalpun/public_html/portal/common/bullhorn.lib.php on line 260
+[2
