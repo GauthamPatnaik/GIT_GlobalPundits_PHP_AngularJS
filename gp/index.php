@@ -115,8 +115,7 @@
                             Finding specialized talent shouldn’t be a bottleneck for your growth. We connect you with vetted experts in AI, Nuclear Engineering, and IT who are ready
                             to hit the ground running. From short-term projects in the US to long-term digital initiatives in the UAE, we provide the reliable professionals you need to
                             get the job done right.
-                        </p>
-						<a href="erp.php"><input class="outline-btn-orange" type="button" value="Read more" /></a>
+                        </p>						
 					</div>
 				</div>
 
@@ -140,8 +139,7 @@
 						<p>The energy industry is changing, and we’re helping lead the way. We provide the engineering talent needed for traditional nuclear plants and the new wave
                         of Small Modular Reactors (SMRs). Whether you are managing an energy grid in the US or supporting the UAE’s clean energy goals, we offer the technical
                         expertise to power your project safely.
-                    </p>
-						<a href="staff.php"><input class="outline-btn-orange" type="button" value="Read more" /></a>
+                    </p>						
 					</div>
 				</div>
 
@@ -155,7 +153,6 @@
                             infrastructure engineers to AI specialists. Our services support the booming tech landscape in the US and the UAE's vision to become a global leader in
                             Artificial Intelligence.
                         </p>
-						<a href="taas.php"><input class="outline-btn-orange" type="button" value="Read more" /></a>
 					</div>
                 </div>
 
@@ -164,11 +161,8 @@
 						<img src="images/ems.png" alt="Higher Education & University Systems">
 					</div>
 					<div class="col-lg-8">
-						<p>We help universiƟes upgrade their technology to beƩer serve students and staff. Our consultants specialize in ERP systems (like Oracle and Workday) that
-                            manage everything from admissions to finances. We make sure higher educaƟon insƟtuƟons in the US and UAE have the modern, easy-to-use tools they
-                            need to thrive in a digital world.
+						<p>We help universities upgrade their technology to better serve students and staff. Our consultants specialize in ERP systems (like Oracle and Workday) that manage everything from admissions to finances. We make sure higher education institutions in the US and UAE have the modern, easy-to-use tools they need to thrive in a digital world.
                         </p>
-						<a href="education.php"><input class="outline-btn-orange" type="button" value="Read more" /></a>
 					</div>
 				</div>
 
@@ -291,18 +285,15 @@
             <div class="row">
                   <div data-sal="slide-up" data-sal-duration="500" data-sal-delay="400" class="col-lg-4 services-block">
                     <img class="services-images" src="images/eng.png" alt="Engineering Services">
-                    <h3 class="h3-center">Data Centers & Infrastructure</h3>
-                    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolorem ullam, ab quidem nobis facilis.</p> -->
+                    <h3 class="h3-center">Data Centers & Infrastructure</h3>                  
                 </div>
                 <div data-sal="slide-up" data-sal-duration="500" data-sal-delay="100" class="col-lg-4 services-block">
                     <img class="services-images" src="images/manu.png" alt="Higher Education">
-                    <h3 class="h3-center">Emerging Tech & AI</h3>
-                    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolorem ullam, ab quidem nobis facilis.</p> -->
+                    <h3 class="h3-center">Emerging Tech & AI</h3>                   
                 </div>
                 <div data-sal="slide-up" data-sal-duration="500" data-sal-delay="200" class="col-lg-4 services-block">
                     <img class="services-images" src="images/edu.png" alt="Financial Services">
-                    <h3 class="h3-center">Critical Infrastructure</h3>
-                    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolorem ullam, ab quidem nobis facilis.</p> -->
+                    <h3 class="h3-center">Critical Infrastructure</h3>                   
                 </div>
             </div>
     </div>
