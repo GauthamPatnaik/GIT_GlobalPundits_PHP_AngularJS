@@ -38,20 +38,32 @@ include("header.html");
             <div id="s-content-1" class="container">
                 <div class="row justify-content-center align-content-top">
                     <div class="col-lg-10">
-                        <h1 class="acc-color">About Us</h1>
-                        <p>Globalpundits is an enterprise IT solutions and staffing firm with specialized expertise in ERP applications and technologies. Our practice areas focus on:</p>
+                        <h1 class="acc-color">About Globalpundits</h1>
+
+                        <p>Globalpundits is a premier global IT and Engineering solutions firm specializing in mission-critical industries. With over 25 years of experience, we provide
+the specialized human capital and technical expertise required to power, secure, and modernize the world’s most essential sectors.</p>
+ <h2 class="acc-color">Our Practice Areas</h2>
+<p>While our foundation is built on world-class ERP expertise, our practice has grown to meet the demands of the global energy and security landscape:</p>
                         
                         <div class="s-emp-block">
                             <ul>
-                                <li>ERP Professional Services including Oracle®, Banner®, Colleague® and Workday®</li>
-                                <li>Managed services for Oracle®, Banner®, Colleague® and Workday®</li>
-                                <li>Custom Software Development</li>
-                                <li>Technical & Professional Staff Augmentation</li>
-                                <li>IT Advisory Services</li>
+                                <li><b>Nuclear & SMR Engineering:</b> Supporting the design and deployment of traditional and Small Modular Reactors (SMRs).</li>
+                                <li><b>Defense IT & Cybersecurity:</b> Providing cleared talent and secure systems for national security initiatives.</li>
+                                <li><b>AI & Data Center Infrastructure:</b> Scaling the digital backbone for the next generation of artificial intelligence.</li>
+                                <li><b>Enterprise ERP Solutions:</b> Expert implementation and management for Oracle®, Ellucian Banner®, Colleague®, and Workday®.</li>
+                                <li><b>Higher Education Modernization:</b> Tailored digital transformation for leading global universities.</li>
+                         <li><b>Technical Staff Augmentation:</b>  Connecting elite technical professionals with the industries that need them most.</li>
                             </ul>
                         
                         </div>
-                        <p>With over 20 years of experience Globalpundits is uniquely qualified to partner with you for your ERP services and staffing needs. Globalpundits proven resources are comprised of an experienced base of solution experts with a proven methodology that enables us to support the most diverse solutions on a global basis.</p>
+                       <h1 class="acc-color">A Global Partner for a Changing World </h1>
+                        <p>Globalpundits is uniquely qualified to support diverse technical solutions on a global scale. We are proud to support major prime contractors and
+commercial giants in the <b>United States</b>, and we are excited to announce that we will soon be <b>fully operational in the United Arab Emirates and Saudi
+Arabia. </b>
+</p>
+ <p>By bridging the gap between North American technical standards and the visionary growth of the Middle East, we ensure our clients have the right people
+and the right technology to succeed, no matter the complexity of the mission.</b>
+</p>
                         <br>
                         <h3 class="acc-color">Globalpundits is guided by a set of core values that result in a superior client experience</h3>
                         <br>
@@ -83,14 +95,11 @@ include("header.html");
                             </div>
                         </div>
 
-                        <h3 class="acc-color">For our clients, who we are is reflected in a differentiating value proposition</h3>
+                        <h3 class="acc-color">For our clients, Empowering Global Leaders in Critical Infrastructure</h3>
                         <div class="s-emp-block">
-                            <ul>
-                                <li>Full life-cycle services from strategy through managed services</li>
-                                <li>Extraordinary consulting talent and expertise</li>
-                                <li>Global reach and off-shore capabilities</li>
-                                <li>Standard project execution and quality</li>
-                            </ul>
+                     <p>We partner with organizations that demand precision and reliability. Whether supporting US Federal Agencies in Defense and Nuclear energy
+or enabling the Digital Transformation of the Middle East, our work is defined by a commitment to excellence and global standards.</p>
+                       
                         </div>
                     </div>
                 </div>
