@@ -45,13 +45,18 @@ include("header.html");
             <div ng-app="contact" ng-controller="contactController" id="s-content-1" class="container">
                 <div class="row justify-content-center align-content-top">
                     <div class="col-lg-10">
-                        <h1 class="acc-color">Contact Us</h1>
+                        <h1 class="acc-color">Contact</h1>
 
                         <div class="row">
                             <div class="col-lg">
                                 
-                                <h3 class="acc-color">Corporate Office</h3>
+                                <h3 class="acc-color">Corporate Office (USA)</h3>
                                 <p><strong><i class="material-icons">directions</i></strong>&nbsp; 927 South Main Street | New Ellenton, SC 29809</p>
+                                <hr>
+                                 <h3 class="acc-color">Corporate Office (INDIA)</h3>                                 
+                                <p><strong><i class="material-icons">directions</i></strong>&nbsp; 8th Floor, Plot No. 1-118/1/14/C, DHFLVC Silicon Towers, Kondapur, Hyderabad, Telangana INDIA 500084</p>
+                                <hr>
+                                 <h3 class="acc-color">Reach Us</h3>
                                 <p><strong><i class="material-icons">local_phone</i></strong>&nbsp; (803) 354-9400</p>
                                 <p><strong><i class="material-icons">local_printshop</i></strong>&nbsp; (803) 996-1055</p>
                                 <p><strong><i class="material-icons">email</i></strong>&nbsp;  info@globalpundits.com</p>
@@ -59,6 +64,7 @@ include("header.html");
                         
                             </div>
                             <div class="col-lg">
+                             <br>
                                 <h3 class="acc-color">Leave a message</h3>
                                 <p class="help_text">We generally are quick repliers, we will get back to you</p>
 

@@ -25,16 +25,17 @@
 <body>
 
 <style type="text/css">
-                        .st0 {
-                        fill: none;
-                        stroke: #00467F;
-                        stroke-width: 5;
-                        stroke-miterlimit: 10;
-                        font-family: Arial, Helvetica, sans-serif;
-                        font-weight: 700;
-                        letter-spacing: 1.2px;
-                        }
-                    </style>
+    .st0 {
+    fill: none;
+    stroke: #00467F;
+    stroke-width: 5;
+    stroke-miterlimit: 10;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    }
+</style>
+
 <?php
     include "header.html";
 ?>
@@ -51,16 +52,16 @@
         <svg data-depth="0.6" id="svg" viewBox="0 0 1600 520" xmlns="http://www.w3.org/2000/svg">
            <g fill="none" fill-rule="evenodd" stroke="#00467F" stroke-width="3" class="layer1">
 
-                <text class="st0" x="1580" y="115" text-anchor="end" font-size="135">
+                <text class="st0" x="1580" y="115" text-anchor="end" font-size="125">
                     The Specialized Talent
                 </text>
 
-                <text class="st0" x="1580" y="245" text-anchor="end" font-size="135">
+                <text class="st0" x="1580" y="245" text-anchor="end" font-size="125">
                     You Need
                 </text>
 
-                <text class="st0" x="1580" y="375" text-anchor="end" font-size="135">
-                    The Speed You Demand
+                <text class="st0" x="1580" y="375" text-anchor="end" font-size="125">
+                    The Quality You Demand
                 </text>
             </g>
         </svg>
@@ -68,10 +69,11 @@
             </div>
             <div data-rellax-speed="5" id="info-container" class="col-lg-5 rellax">
                 <div id="landing-info">
-                    <p> We bridge the gap between complex projects and elite expertise. Globalpundits provides top-tier staff augmentation for <b>Nuclear engineering</b>, <b>Data Center management</b>, and <b>ERP implementation</b> across the US and UAE.
+                    <h1>Who are we?</h1>
+                    <p style="text-align: justify; font-size: 14px;"> Globalpundits is a U.S.based engineering and technical consulting firm supporting nuclear and mission-critical programs through high-assurance staffing and compliance-aligned program support. Founded in 2000, we operate in environments where regulatory discipline, technical rigor, and execution integrity are fundamental.
                        <br>
                     </p>
-                    <input id="servicesScrollBtn" type="button" value="Our Services" class="solid-btn">
+                    <!-- <input id="servicesScrollBtn" type="button" value="Our Services" class="solid-btn"> -->
                 </div>
             </div>
         </div>
@@ -86,14 +88,18 @@
 <div id="section-2" class="container-fluid">
     <div data-sal="slide-up" data-sal-duration="500" class="container">
         <div class="row justify-content-center align-items-center rounded">
-            <div id="aboutimg-container" class="col-lg-4">
+            <!-- <h1>Our Services</h1> -->
+            <!-- <div id="servicesScrollBtn" class="col-lg-12">
+
+            </div> -->
+            <!-- <div id="aboutimg-container" class="col-lg-4">
                 <img id="about-img" src="images/about2.png" alt="About Us">
             </div>
             <div id="about-desc" class="col-lg-7">
                 <h1>Who are we?</h1>
                 <p>Founded in 2000, Globalpundits is uniquely qualified to partner with you for your ERP services and staffing needs. Globalpundits proven resources are comprised of an experienced base of solution experts with a proven methodology that enables us to support the most diverse solutions on a global basis.</p>
                 <a href="about.php"><input class="outline-btn-orange" type="button" value="Read more" /></a>
-            </div>
+            </div> -->
         </div>
         <br><br>
     </div>
@@ -111,11 +117,8 @@
 						<img src="images/eps.png" alt=" Technical & Professional Staffing">
 					</div>
 					<div class="col-lg-8">
-						<p>
-                            Finding specialized talent shouldn’t be a bottleneck for your growth. We connect you with vetted experts in AI, Nuclear Engineering, and IT who are ready
-                            to hit the ground running. From short-term projects in the US to long-term digital initiatives in the UAE, we provide the reliable professionals you need to
-                            get the job done right.
-                        </p>						
+						<p style="text-align: justify; font-size: 14px;">Finding specialized talent shouldn’t be a bottleneck for your growth. We connect you with vetted experts in <b>AI, Nuclear Engineering, and IT</b> who are ready to hit the ground running. </p>
+                        <p style="text-align: justify;font-size: 14px;">With an established presence supporting clients across the <b>USA</b> and <b>operations in Abu Dhabi, UAE starting soon</b>, we bridge the gap between global demand and elite expertise. From short-term domestic projects to long-term digital initiatives in the Middle East, we provide the reliable professionals you need to get the job done right.</p>
 					</div>
 				</div>
 
@@ -124,9 +127,9 @@
 						<img src="images/ems.png" alt="Defense IT & Cybersecurity">
 					</div>
 					<div class="col-lg-8">
-						<p>Security is non-negotiable, especially in defense. We provide IT specialists who understand the strict requirements of the US Department of Defense and
-                            UAE national security projects. Our team helps you stay compliant with the latest regulations while ensuring your data and infrastructure remain protected
-                            against modern threats.
+						<p style="text-align: justify;font-size: 14px;">Security is non-negotiable, especially in defense. We provide IT specialists who understand the strict requirements of the <b>US Department of Defense </b> and <b>UAE national security projects.</b>
+                        </p>
+                        <p style="text-align: justify;font-size: 14px;">With our deep roots in the <b>USA</b> and <b>operations in Abu Dhabi, UAE starting soon</b>, our team helps you stay compliant with the latest global regulations while ensuring your data and infrastructure remain protected against modern threats. Whether supporting domestic defense initiatives or upcoming projects in the Middle East, we deliver the specialized security expertise required for mission-critical success.
                         </p>
 					</div>
 				</div>
@@ -136,10 +139,9 @@
 						<img src="images/staff.png" alt=" Nuclear & Energy Engineering">
 					</div>
 					<div class="col-lg-8">
-						<p>The energy industry is changing, and we’re helping lead the way. We provide the engineering talent needed for traditional nuclear plants and the new wave
-                        of Small Modular Reactors (SMRs). Whether you are managing an energy grid in the US or supporting the UAE’s clean energy goals, we offer the technical
-                        expertise to power your project safely.
-                    </p>						
+						<p style="text-align: justify;font-size: 14px;">The energy industry is changing, and we’re helping lead the way. We provide the engineering talent needed for traditional nuclear plants and the new wave of Small Modular Reactors (SMRs).
+                        </p>
+                        <p style="text-align: justify;font-size: 14px;">With a strong foundation supporting the <b>USA</b> energy grid and <b>operations in Abu Dhabi, UAE starting soon</b>, we offer the global technical expertise required to power your projects safely. Whether you are managing domestic utilities or supporting the <b>UAE’s clean energy goals</b>, our vetted specialists ensure your infrastructure meets the highest standards of innovation and reliability.</p>
 					</div>
 				</div>
 
@@ -148,11 +150,9 @@
 						<img src="images/ems.png" alt="Data Centers & AI Support">
 					</div>
 					<div class="col-lg-8">
-						<p>
-                            Data centers and AI are the engines of the modern economy. We help you build and manage these criƟcal hubs by providing the right staff—from
-                            infrastructure engineers to AI specialists. Our services support the booming tech landscape in the US and the UAE's vision to become a global leader in
-                            Artificial Intelligence.
+						<p style="text-align: justify;font-size: 14px;">Data centers and AI are the engines of the modern economy. We help you build and manage these critical hubs by providing the right staff—from infrastructure engineers to AI specialists.
                         </p>
+                        <p style="text-align: justify;font-size: 14px;">With our proven track record in the <b>USA</b> and <b>operations in Abu Dhabi, UAE starting soon</b>, our services support the booming tech landscape domestically while helping realize the <b>UAE's vision</b> to become a global leader in Artificial Intelligence. Whether you are scaling local infrastructure or launching next-generation digital initiatives in the Middle East, we provide the elite talent needed to power your growth.</p>
 					</div>
                 </div>
 
@@ -161,8 +161,16 @@
 						<img src="images/ems.png" alt="Higher Education & University Systems">
 					</div>
 					<div class="col-lg-8">
-						<p>We help universities upgrade their technology to better serve students and staff. Our consultants specialize in ERP systems (like Oracle and Workday) that manage everything from admissions to finances. We make sure higher education institutions in the US and UAE have the modern, easy-to-use tools they need to thrive in a digital world.
+						<p style="text-align: justify;font-size: 14px;">Modern academia relies on a seamless blend of technology and administration. We specialize in providing expert <b>ERP consultants</b> to help institutions manage their most critical systems.</p>
+                        <p style="text-align: justify;font-size: 14px;">Building on our deep experience supporting university systems across the <b>USA</b> and with <b>operations in Abu Dhabi, UAE starting soon</b>, we provide vetted specialists in:
                         </p>
+                        <ul>
+                            <li style="font-size: 14px;">Oracle ERP</li>
+                            <li style="font-size: 14px;">Workday</li>
+                            <li style="font-size: 14px;" >Ellucian Banner</li>
+                        </ul>
+                        <p style="text-align: justify;font-size: 14px;">From campus IT infrastructure to full-scale digital transformations, Globalpundits provides the elite talent to ensure your institution remains secure, efficient, and future-ready.</p>
+
 					</div>
 				</div>
 
@@ -188,11 +196,8 @@
             </div>
             <div class="col-lg-8">
                 <h2>Technical & Professional Staffing</h2>
-                <p>
-                    Finding specialized talent shouldn’t be a bottleneck for your growth. We connect you with vetted experts in AI, Nuclear Engineering, and IT who are ready
-                    to hit the ground running. From short-term projects in the US to long-term digital initiatives in the UAE, we provide the reliable professionals you need to
-                    get the job done right.
-                </p>
+                <p style="text-align: justify; font-size: 14px;">Finding specialized talent shouldn’t be a bottleneck for your growth. We connect you with vetted experts in <b>AI, Nuclear Engineering, and IT</b> who are ready to hit the ground running. </p>
+                <p style="text-align: justify;font-size: 14px;">With an established presence supporting clients across the USA and operations in Abu Dhabi,UAE starting soon, we bridge the gap between global demand and elite expertise. From short-term domestic projects to long-term digital initiatives in the Middle East, we provide the reliable professionals you need to get the job done right.</p>
             </div>
         </div>
         <br>
@@ -202,9 +207,9 @@
             </div>
             <div class="col-lg-8">
                  <h2>Defense IT & Cybersecurity</h2>
-                <p>Security is non-negotiable, especially in defense. We provide IT specialists who understand the strict requirements of the US Department of Defense and
-                    UAE national security projects. Our team helps you stay compliant with the latest regulations while ensuring your data and infrastructure remain protected
-                    against modern threats.
+                 <p style="text-align: justify;font-size: 14px;">Security is non-negotiable, especially in defense. We provide IT specialists who understand the strict requirements of the <b>US Department of Defense </b> and <b>UAE national security projects.</b>
+                </p>
+                <p style="text-align: justify;font-size: 14px;">With our deep roots in the <b>USA</b> and <b>operations in Abu Dhabi, UAE starting soon</b>, our team helps you stay compliant with the latest global regulations while ensuring your data and infrastructure remain protected against modern threats. Whether supporting domestic defense initiatives or upcoming projects in the Middle East, we deliver the specialized security expertise required for mission-critical success.
                 </p>
             </div>
             <div class="col-lg-3 section-3-img-block non-mobile-block">
@@ -218,11 +223,9 @@
             </div>
             <div class="col-lg-8">
                 <h2>Nuclear & Energy Engineering</h2>
-                <p>
-                    The energy industry is changing, and we’re helping lead the way. We provide the engineering talent needed for traditional nuclear plants and the new wave
-                    of Small Modular Reactors (SMRs). Whether you are managing an energy grid in the US or supporting the UAE’s clean energy goals, we offer the technical
-                    expertise to power your project safely.
+                <p style="text-align: justify;font-size: 14px;">The energy industry is changing, and we’re helping lead the way. We provide the engineering talent needed for traditional nuclear plants and the new wave of Small Modular Reactors (SMRs).
                 </p>
+                <p style="text-align: justify;font-size: 14px;">With a strong foundation supporting the <b>USA</b> energy grid and <b>operations in Abu Dhabi starting soon</b>, we offer the global technical expertise required to power your projects safely. Whether you are managing domestic utilities or supporting the <b>UAE’s clean energy goals</b>, our vetted specialists ensure your infrastructure meets the highest standards of innovation and reliability.</p>
             </div>
         </div>
         <br>
@@ -232,11 +235,9 @@
             </div>
             <div class="col-lg-8">
                 <h2>Data Centers & AI Support</h2>
-                <p>
-                    Data centers and AI are the engines of the modern economy. We help you build and manage these critical hubs by providing the right staff—from
-                    infrastructure engineers to AI specialists. Our services support the booming tech landscape in the US and the UAE's vision to become a global leader in
-                    Artificial Intelligence.
+               <p style="text-align: justify;font-size: 14px;">Data centers and AI are the engines of the modern economy. We help you build and manage these critical hubs by providing the right staff—from infrastructure engineers to AI specialists.
                 </p>
+                 <p style="text-align: justify;font-size: 14px;">With our proven track record in the <b>USA</b> and <b>operations in Abu Dhabi, UAE starting soon</b>, our services support the booming tech landscape domestically while helping realize the <b>UAE's vision</b> to become a global leader in Artificial Intelligence. Whether you are scaling local infrastructure or launching next-generation digital initiatives in the Middle East, we provide the elite talent needed to power your growth.</p>
             </div>
             <div class="col-lg-3 section-3-img-block non-mobile-block">
                 <img src="images/ems.png" alt="Testing As A Services">
@@ -250,9 +251,15 @@
             </div>
             <div class="col-lg-8">
                 <h2>Higher Education & University Systems</h2>
-                <p>
-                    We help universities upgrade their technology to better serve students and staff. Our consultants specialize in ERP systems (like Oracle and Workday) that manage everything from admissions to finances. We make sure higher education institutions in the US and UAE have the modern, easy-to-use tools they need to thrive in a digital world.
-                </p>
+               <p style="text-align: justify;font-size: 14px;">Modern academia relies on a seamless blend of technology and administration. We specialize in providing expert <b>ERP consultants</b> to help institutions manage their most critical systems.</p>
+                        <p style="text-align: justify;font-size: 14px;">Building on our deep experience supporting university systems across the <b>USA</b> and with <b>operations in Abu Dhabi, UAE starting soon</b>, we provide vetted specialists in:
+                        </p>
+                        <ul>
+                            <li style="font-size: 14px;">Oracle ERP</li>
+                            <li style="font-size: 14px;">Workday</li>
+                            <li style="font-size: 14px;" >Ellucian Banner</li>
+                        </ul>
+                        <p style="text-align: justify;font-size: 14px;">From campus IT infrastructure to full-scale digital transformations, Globalpundits provides the elite talent to ensure your institution remains secure, efficient, and future-ready.</p>
             </div>
         </div>
 
@@ -285,15 +292,15 @@
             <div class="row">
                   <div data-sal="slide-up" data-sal-duration="500" data-sal-delay="400" class="col-lg-4 services-block">
                     <img class="services-images" src="images/eng.png" alt="Engineering Services">
-                    <h3 class="h3-center">Data Centers & Infrastructure</h3>                  
+                    <h3 class="h3-center">Data Centers & Infrastructure</h3>
                 </div>
                 <div data-sal="slide-up" data-sal-duration="500" data-sal-delay="100" class="col-lg-4 services-block">
                     <img class="services-images" src="images/manu.png" alt="Higher Education">
-                    <h3 class="h3-center">Emerging Tech & AI</h3>                   
+                    <h3 class="h3-center">Emerging Tech & AI</h3>
                 </div>
                 <div data-sal="slide-up" data-sal-duration="500" data-sal-delay="200" class="col-lg-4 services-block">
                     <img class="services-images" src="images/edu.png" alt="Financial Services">
-                    <h3 class="h3-center">Critical Infrastructure</h3>                   
+                    <h3 class="h3-center">Critical Infrastructure</h3>
                 </div>
             </div>
     </div>
@@ -311,7 +318,7 @@
         <div class="row justify-content-around align-items-bottom">
             <div data-sal="slide-up" data-sal-duration="500" data-sal-delay="100" class="col-lg-12">
                 <h3>Our Values</h3>
-                <p>At Globalpundits, our values are the foundation of every partnership. As we expand our reach from the United States to the UAE and Saudi Arabia, we remain committed to a standard of excellence that serves our clients, our employees, and our global community.
+                <p>At Globalpundits, our values are the foundation of every partnership. As we expand our reach from the United States to the UAE, we remain committed to a standard of excellence that serves our clients, our employees, and our global community.
                 </p>
             </div>
         </div>
@@ -337,7 +344,7 @@
                 <h3>Commitment to People</h3>
                 <p>Our greatest asset is our talent. We foster a culture of continuous learning and professional growth, ensuring our experts are always equipped to lead Digital
                    Transformations in higher education and beyond.</p>
-            </div>       
+            </div>
         </div>
 
         <div class="row justify-content-around align-items-bottom">

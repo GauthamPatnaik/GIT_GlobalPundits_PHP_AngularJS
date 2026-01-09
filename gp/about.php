@@ -38,14 +38,23 @@ include("header.html");
             <div id="s-content-1" class="container">
                 <div class="row justify-content-center align-content-top">
                     <div class="col-lg-10">
-                        <h1 class="acc-color">About Globalpundits</h1>
+                        <h1 class="acc-color">Company Overview</h1>
 
-                        <p>Globalpundits is a premier global IT and Engineering solutions firm specializing in mission-critical industries. With over 25 years of experience, we provide
-the specialized human capital and technical expertise required to power, secure, and modernize the world’s most essential sectors.</p>
- <h2 class="acc-color">Our Practice Areas</h2>
-<p>While our foundation is built on world-class ERP expertise, our practice has grown to meet the demands of the global energy and security landscape:</p>
-                        
-                        <div class="s-emp-block">
+                        <p style="text-align: justify;">Globalpundits is a U.S.based engineering and technical consulting firm supporting nuclear and mission-critical programs through high-assurance staffing and compliance-aligned program support. Founded in 2000, we operate in environments where regulatory discipline, technical rigor, and execution integrity are fundamental.</p>
+ <h2 class="acc-color">Program Support & Engagement Model</h2>
+<p style="text-align: justify;">Globalpundits supports programs by supplying experienced engineering, technical, and AI-adjacent digital infrastructure professionals who embed directly within prime contractor teams, including programs led by multiple U.S. Department of Energy (DOE) and Department of Defense (DOD) prime contractors. </p>
+<p style="text-align: justify;">Our teams operate in DOE- and DOD-aligned secure program environments, providing cleared and clearance-eligible technical professionals, and Globalpundits maintains certification under the Department of Defense Joint Certification Program (JCP) for compliant handling of controlled technical data. Our role is focused on program support and staff augmentation.</p>
+<p style="text-align: justify;">Our primary focus is nuclear and regulated energy programs, including advanced and Small Modular Reactor (SMR)–related initiatives, supporting engineering, safety, licensing, quality, and compliance-driven efforts through experienced, program-embedded talent. We also support energy-intensive and infrastructure-aligned digital environments, including AI data centers, by providing engineering and IT professionals experienced in regulated operational settings.</p>                       
+
+ <h2 class="acc-color">Operating in Regulated Program Environments</h2>    
+ <p style="text-align: justify;">We are accustomed to working within strict regulatory and quality frameworks. Our engagement approach emphasizes disciplined execution, alignment with client governance, and respect for established controls and processes.</p>
+ <p style="text-align: justify;">Our professionals are deployed with a clear understanding of compliance expectations, documentation rigor, and audit-driven environments, enabling them to contribute effectively within mission-critical programs.</p>
+ <p style="text-align: justify;">Globalpundits maintains U.S. government-recognized compliance credentials, including certification under the Department of Defense Joint Certification Program (JCP), aligned with regulated program requirements.</p>
+
+  <h2 class="acc-color"> Strategic Focus & Outlook</h2> 
+  <p style="text-align: justify;">As nuclear and regulated infrastructure programs continue to evolve, Globalpundits is deepening its focus on mission-critical and nuclear-aligned environments, including advanced and emerging reactor initiatives. We are also selectively expanding our international engagement, with active plans to support clients and partners in the Abu Dhabi region as regulatory frameworks, client needs, and program requirements align.</p>
+  <p style="text-align: justify;">Our approach to expansion remains deliberate and compliance-driven, prioritizing alignment with local regulations, client governance models, and the expectations of regulated energy and infrastructure programs.</p>
+          <!-- <div class="s-emp-block">
                             <ul>
                                 <li><b>Nuclear & SMR Engineering:</b> Supporting the design and deployment of traditional and Small Modular Reactors (SMRs).</li>
                                 <li><b>Defense IT & Cybersecurity:</b> Providing cleared talent and secure systems for national security initiatives.</li>
@@ -63,7 +72,7 @@ Arabia. </b>
 </p>
  <p>By bridging the gap between North American technical standards and the visionary growth of the Middle East, we ensure our clients have the right people
 and the right technology to succeed, no matter the complexity of the mission.</b>
-</p>
+</p> -->
                         <br>
                         <h3 class="acc-color">Globalpundits is guided by a set of core values that result in a superior client experience</h3>
                         <br>
