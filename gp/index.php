@@ -368,11 +368,9 @@
 <?php
     include "footer.html";
 ?>
- <a href="referral.php" class="float">
-        <!-- <img src="https://www.globalpundits.com/images/Integrity.png" style="width: 50px; height: auto"> -->
-        <i class="material-icons">military_tech</i>
-        <!-- <i class="material-icons">card_giftcard</i> -->
-        Get Rewarded  </a>
+ <!-- <a href="referral.php" class="float">     
+        <i class="material-icons">military_tech</i>       
+        Get Rewarded  </a> -->
 </body>
 <script src="js/header.js"></script>
 <script src="js/index.js"></script>
