@@ -202,7 +202,7 @@ input[type='button'] {
     min-height: 100vh;
 }
 #section-1 {
-    min-height: 100vh;
+    min-height: 50vh;
     max-width: 100%;
     width: 100%;
     max-width: 100%;
@@ -215,7 +215,7 @@ input[type='button'] {
     background: linear-gradient(to right, rgba(0,70,127,1) 0%,rgba(0,140,255,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00467f', endColorstr='#008cff',GradientType=1 ); */
     padding-bottom: 50px;
-    margin-bottom: -100px;
+    margin-bottom: -200px;
 }
 /* #first-section>div {
     border: 1px solid black; 
@@ -400,6 +400,10 @@ div:hover > h1::after {
     width: 200px;
     transition: width 0.3s;
 }
+#capabilities-container:hover > .h1-center::after {
+    width: 200px;
+    transition: width 0.3s;
+}
 #clients-container:hover > .h1-center::after {
     width: 200px;
     transition: width 0.3s;
@@ -484,6 +488,10 @@ h3:hover::after {
     width: 80px;
     transition: width 0.3s;
 }
+.capabilities-block:hover>.h3-center::after {
+    width: 80px;
+    transition: width 0.3s;
+}
 
 div:hover>.h3-center::after {
     width: 80px;
@@ -498,6 +506,10 @@ div:hover>h3::after {
     color: #fff;
 }
 #section-3 {
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+#section-capabilites {
     padding-top: 30px;
     padding-bottom: 60px;
 }
@@ -517,6 +529,9 @@ div:hover>h3::after {
 .services-block {
     text-align: center;
 }
+.capabilities-block {
+    text-align: center;
+}
 .services-images {
     width: 25%;
 	max-width: 70px;
@@ -528,6 +543,12 @@ div:hover>h3::after {
     padding: 60px;
 }
 .section-3-img-block1 {
+    padding: 20px;
+}
+.section-capabilities-img-block {
+    padding: 60px;
+}
+.section-capabilities-img-block1 {
     padding: 20px;
 }
 
