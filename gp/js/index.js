@@ -55,9 +55,43 @@ function changeService(val) {
 	}
 	
 }
+
+var currCap = 0;
+		
+function changeCapabilities(val) {
+	if (currCap!=val) {
+		TweenMax.to(capabilitiesBlocks[currCap], 0.5, {marginTop:-200, opacity:0, ease: Power1.easeInOut});
+		TweenMax.to(capabilitesBlocks[val], 0.5, {marginTop:40, opacity:1, ease: Power1.easeInOut});
+		
+		$(capabilitiesLinks[currCap]).removeClass('selected');
+		$(capabilitiesLinks[val]).addClass('selected');
+		
+		setTimeout(function() {
+			TweenMax.to(capabilitiesBlocks[currCap], 0, {marginTop:300});
+			
+			currCap = val;
+		}, 500);			
+		
+	}
+	
+}
 $(document).ready(function() {
 	
-	serviceBlocks = $("#services-display").children("div").toArray();
+	capabilitiesBlocks = $("#capabilities-display").children("div").toArray();
+	capabilitiesLinks = $("#capabilities-selector>ul").children("li").toArray();
+
+    TweenMax.to(capabilitiesBlocks[0], 0.5, {marginTop:40, opacity:1});
+    
+    TweenMax.to("#landing-info", 0.5, {marginLeft:0, opacity:1, delay:0.5, ease: Power1.easeInOut});
+    
+    $("#capabilitiesScrollBtn").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#section-capabilities").offset().top
+        }, 1000);
+    });
+    
+
+    serviceBlocks = $("#services-display").children("div").toArray();
 	serviceLinks = $("#services-selector>ul").children("li").toArray();
 
     TweenMax.to(serviceBlocks[0], 0.5, {marginTop:40, opacity:1});

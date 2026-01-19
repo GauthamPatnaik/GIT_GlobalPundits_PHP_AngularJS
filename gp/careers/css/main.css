@@ -727,3 +727,17 @@ label {
         display: block;
     }
 }
+
+#svg line[stroke="orange"],
+#svg line[stroke="#FFA500"],
+#svg line[stroke="#ffa500"],
+#svg rect[fill="orange"],
+#svg rect[fill="#FFA500"],
+#svg rect[fill="#ffa500"],
+#svg .cursor,
+#svg [class*="cursor"],
+#svg [id*="cursor"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}

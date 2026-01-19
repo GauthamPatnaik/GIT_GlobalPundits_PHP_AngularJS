@@ -57,7 +57,7 @@ if (isset($_GET['_escaped_fragment_'])) {
 </head>
 <body ng-app="gpCareers">
 
-<?php include("../header.html"); ?>
+<?php include("/gp/header.html"); ?>
 
 <div id="router">
     <ui-view></ui-view>
@@ -65,7 +65,7 @@ if (isset($_GET['_escaped_fragment_'])) {
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<?php include("../footer.html"); ?>
+<?php include("/gp/footer.html"); ?>
   
 </body>
 <script> <?php include("../js/header.js") ?> </script>
