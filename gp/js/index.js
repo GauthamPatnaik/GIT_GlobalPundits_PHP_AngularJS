@@ -1,10 +1,10 @@
-$(document).ready(function(e) {
+$(document).ready(function (e) {
 
     var scene = document.getElementById('illus-container');
-    var parallaxInstance = new Parallax(scene); 
+    var parallaxInstance = new Parallax(scene);
 
     var scene = document.getElementById('pent-scene');
-    var parallaxInstance = new Parallax(scene); 
+    var parallaxInstance = new Parallax(scene);
 
     sal({
         once: true
@@ -37,68 +37,34 @@ $(document).ready(function(e) {
 });
 
 var curr = 0;
-		
+
 function changeService(val) {
-	if (curr!=val) {
-		TweenMax.to(serviceBlocks[curr], 0.5, {marginTop:-200, opacity:0, ease: Power1.easeInOut});
-		TweenMax.to(serviceBlocks[val], 0.5, {marginTop:40, opacity:1, ease: Power1.easeInOut});
-		
-		$(serviceLinks[curr]).removeClass('selected');
-		$(serviceLinks[val]).addClass('selected');
-		
-		setTimeout(function() {
-			TweenMax.to(serviceBlocks[curr], 0, {marginTop:300});
-			
-			curr = val;
-		}, 500);			
-		
-	}
-	
-}
+    if (curr != val) {
+        TweenMax.to(serviceBlocks[curr], 0.5, { marginTop: -200, opacity: 0, ease: Power1.easeInOut });
+        TweenMax.to(serviceBlocks[val], 0.5, { marginTop: 40, opacity: 1, ease: Power1.easeInOut });
 
-var currCap = 0;
-		
-function changeCapabilities(val) {
-	if (currCap!=val) {
-		TweenMax.to(capabilitiesBlocks[currCap], 0.5, {marginTop:-200, opacity:0, ease: Power1.easeInOut});
-		TweenMax.to(capabilitesBlocks[val], 0.5, {marginTop:40, opacity:1, ease: Power1.easeInOut});
-		
-		$(capabilitiesLinks[currCap]).removeClass('selected');
-		$(capabilitiesLinks[val]).addClass('selected');
-		
-		setTimeout(function() {
-			TweenMax.to(capabilitiesBlocks[currCap], 0, {marginTop:300});
-			
-			currCap = val;
-		}, 500);			
-		
-	}
-	
-}
-$(document).ready(function() {
-	
-	capabilitiesBlocks = $("#capabilities-display").children("div").toArray();
-	capabilitiesLinks = $("#capabilities-selector>ul").children("li").toArray();
+        $(serviceLinks[curr]).removeClass('selected');
+        $(serviceLinks[val]).addClass('selected');
 
-    TweenMax.to(capabilitiesBlocks[0], 0.5, {marginTop:40, opacity:1});
-    
-    TweenMax.to("#landing-info", 0.5, {marginLeft:0, opacity:1, delay:0.5, ease: Power1.easeInOut});
-    
-    $("#capabilitiesScrollBtn").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#section-capabilities").offset().top
-        }, 1000);
-    });
-    
+        setTimeout(function () {
+            TweenMax.to(serviceBlocks[curr], 0, { marginTop: 300 });
+
+            curr = val;
+        }, 500);
+
+    }
+
+}
+$(document).ready(function () {
 
     serviceBlocks = $("#services-display").children("div").toArray();
-	serviceLinks = $("#services-selector>ul").children("li").toArray();
+    serviceLinks = $("#services-selector>ul").children("li").toArray();
 
-    TweenMax.to(serviceBlocks[0], 0.5, {marginTop:40, opacity:1});
-    
-    TweenMax.to("#landing-info", 0.5, {marginLeft:0, opacity:1, delay:0.5, ease: Power1.easeInOut});
-    
-    $("#servicesScrollBtn").click(function() {
+    TweenMax.to(serviceBlocks[0], 0.5, { marginTop: 40, opacity: 1 });
+
+    TweenMax.to("#landing-info", 0.5, { marginLeft: 0, opacity: 1, delay: 0.5, ease: Power1.easeInOut });
+
+    $("#servicesScrollBtn").click(function () {
         $('html, body').animate({
             scrollTop: $("#section-3").offset().top
         }, 1000);
