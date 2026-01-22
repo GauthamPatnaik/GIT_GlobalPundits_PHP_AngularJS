@@ -36,26 +36,30 @@ include("header.html");
 ?>
 
 <!-- content starts here -->
-<!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.223233188851!2d-81.1737216847493!3d34.012480427271896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f897f88cf6f98b%3A0x96d526b3f6eb2ca5!2s4715+D+Sunset+Blvd%2C+Lexington%2C+SC+29072%2C+USA!5e0!3m2!1sen!2sin!4v1540415239309" allowfullscreen id="map"></iframe>-->
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3331.134281154544!2d-81.68662268485191!3d33.39366075959458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f9ae2f4254df79%3A0x34b032fabb2f65e5!2s927%20Main%20St%2C%20New%20Ellenton%2C%20SC%2029809%2C%20USA!5e0!3m2!1sen!2sin!4v1638276235146!5m2!1sen!2sin" allowfullscreen id="map"></iframe>
-
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.223233188851!2d-81.1737216847493!3d34.012480427271896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f897f88cf6f98b%3A0x96d526b3f6eb2ca5!2s4715+D+Sunset+Blvd%2C+Lexington%2C+SC+29072%2C+USA!5e0!3m2!1sen!2sin!4v1540415239309" allowfullscreen id="map"></iframe>
 <div data-sal="slide-up" data-sal-duration="500" id="s-contact-area" class="container-fluid">
     <div class="row align-items-top">
         <div data-sal="slide-up" data-sal-duration="500" data-sal-delay="100" class="col-lg content-pane">
             <div ng-app="contact" ng-controller="contactController" id="s-content-1" class="container">
                 <div class="row justify-content-center align-content-top">
                     <div class="col-lg-10">
-                        <h1 class="acc-color">Contact Us</h1>
+                        <h1 class="acc-color">Contact</h1>
 
                         <div class="row">
                             <div class="col-lg">
                                 
-                                <h3 class="acc-color">Corporate Office</h3>
+                                <h3 class="acc-color">Corporate Office (USA)</h3>
                                 <p><strong><i class="material-icons">directions</i></strong>&nbsp; 927 South Main Street | New Ellenton, SC 29809</p>
+                                
+                           <hr>
+                                <h3 class="acc-color">India</h3>
+                                <p><strong><i class="material-icons">directions</i></strong>&nbsp;  8th Floor, Plot No. 1-118/1/14/C, DHFLVC Silicon Towers, Kondapur, Hyderabad, Telangana INDIA 500084</p>
+                                <hr>
+                                <h3 class="acc-color">Reach Us</h3>
                                 <p><strong><i class="material-icons">local_phone</i></strong>&nbsp; (803) 354-9400</p>
                                 <p><strong><i class="material-icons">local_printshop</i></strong>&nbsp; (803) 996-1055</p>
                                 <p><strong><i class="material-icons">email</i></strong>&nbsp;  info@globalpundits.com</p>
-                                <!-- <br><hr><br> -->
+                                <br><hr><br>
                         
                             </div>
                             <div class="col-lg">
@@ -63,29 +67,29 @@ include("header.html");
                                 <p class="help_text">We generally are quick repliers, we will get back to you</p>
 
                                 <form name="c_form" ng-submit="submitForm()">
-                                  <!-- <label for="contact_name">Your Name</label> -->
-                                  <input ng-model="formData.name" name="c_name" type="text"  id="contact_name" placeholder="Your Name" required>
+                                  <label for="contact_name">Your Name</label>
+                                  <input ng-model="formData.name" name="c_name" type="text"  id="contact_name" required>
                                   
                                   <div ng-messages="c_form.c_name.$error" ng-show="c_form.c_name.$touched">
                                       <div ng-message="required" class="field-message">This field is required</div>
                                   </div>
 
-                                  <!-- <label for="contact_mail">Your Email ID</label> -->
-                                  <input ng-model="formData.mail" name="c_mail" type="email" id="contact_mail"  placeholder="Your Email ID" required>
+                                  <label for="contact_mail">Your Email ID</label>
+                                  <input ng-model="formData.mail" name="c_mail" type="email" id="contact_mail" required>
                                   
                                   <div ng-messages="c_form.c_mail.$error" ng-show="c_form.c_mail.$touched">
                                       <div ng-message="required" class="field-message">This field is required</div>
                                       <div ng-message="email" class="field-message">Not a valid email ID</div>
                                   </div>
 
-                                  <!-- <label for="contact_message">Your Message</label> -->
-                                  <textarea ng-model="formData.message" name="c_message"  id="contact_message" rows="10" placeholder="Your Message"  required></textarea>
+                                  <label for="contact_message">Your Message</label>
+                                  <textarea ng-model="formData.message" name="c_message"  id="contact_message" rows="10" required></textarea>
                                   
                                   <div ng-messages="c_form.c_message.$error" ng-show="c_form.c_message.$touched">
                                       <div ng-message="required" class="field-message">This field is required</div>
                                   </div>
 
-                                  <input type="submit" value="Send" class="button">  
+                                  <input type="submit" value="Send" class="outline-btn">  
                                 </form>
                             </div>
                         </div>
