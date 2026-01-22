@@ -59,7 +59,7 @@
         <strong>Globalpundits is a U.S.-based, Minority-Owned Small Business</strong> providing engineering and technical consulting services, headquartered in Aiken, South Carolina. Founded in 2000, we support nuclear and mission-critical programs through high-assurance staffing and compliance-aligned program support, operating in environments where regulatory discipline, technical rigor, and execution integrity are fundamental.
     </p>
 
-    <a href="about.php" class="hero-btn solid-btn" style="margin-top:20%;">
+    <a href="/about.php" class="hero-btn solid-btn" style="margin-top:20%;">
         Read More
     </a>
 
