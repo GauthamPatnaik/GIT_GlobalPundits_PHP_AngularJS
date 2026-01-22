@@ -34,24 +34,45 @@ include("header.html");
 <!-- <div data-sal="slide-up" data-sal-duration="500" id="top-space"></div> -->
 <div data-sal="slide-up" data-sal-duration="500" id="s-content-area" class="container-fluid">
     <div class="row align-items-top">
-        <div data-sal="slide-up" data-sal-duration="500" data-sal-delay="100" class="col-lg-9 content-pane">
+        <div data-sal="slide-up" data-sal-duration="500" data-sal-delay="100" class="col-lg-12 content-pane">
             <div id="s-content-1" class="container">
                 <div class="row justify-content-center align-content-top">
                     <div class="col-lg-10">
-                        <h1 class="acc-color">About Us</h1>
-                        <p>Globalpundits is an enterprise IT solutions and staffing firm with specialized expertise in ERP applications and technologies. Our practice areas focus on:</p>
-                        
-                        <div class="s-emp-block">
+                        <h1 class="acc-color">Company Overview</h1>
+
+                        <p style="text-align: left;"><b>Globalpundits is a U.S. based, Minority-Owned Small Business</b> providing engineering and technical consulting services, headquartered in Aiken, South Carolina. Founded in 2000, we support nuclear and mission-critical programs through high-assurance staffing and compliance-aligned program support, operating in environments where regulatory discipline, technical rigor, and execution integrity are fundamental.</p>
+                        <h2 class="acc-color" style="font-size:22px;">Program Support & Engagement Model</h2>
+<p style="text-align: left; font-size:18px;">Globalpundits supports programs by supplying experienced engineering, technical, and AI-adjacent digital infrastructure professionals who embed directly within prime contractor teams, including programs led by multiple U.S. Department of Energy (DOE) and Department of Defense (DoD) prime contractors. </p>
+<p style="text-align: left; font-size:18px;">Our teams operate in DOE- and DoD-aligned secure program environments, providing cleared and clearance-eligible technical professionals, and Globalpundits maintains certification under the Department of Defense Joint Certification Program (JCP) for compliant handling of controlled technical data. Our role is focused on program support and staff augmentation.</p>
+<p style="text-align: left; font-size:18px;">Our primary focus is nuclear and regulated energy programs, including advanced and Small Modular Reactor (SMR)–related initiatives, supporting engineering, safety, licensing, quality, and compliance-driven efforts through experienced, program-embedded talent. We also support energy-intensive and infrastructure-aligned digital environments, including AI data centers, by providing engineering and IT professionals experienced in regulated operational settings.</p>                       
+
+ <h2 class="acc-color" style="font-size:22px;">Operating in Regulated Program Environments</h2>    
+ <p style="text-align: left; font-size:18px;">We are accustomed to working within strict regulatory and quality frameworks. Our engagement approach emphasizes disciplined execution, alignment with client governance, and respect for established controls and processes.</p>
+ <p style="text-align: left; font-size:18px;">Our professionals are deployed with a clear understanding of compliance expectations, documentation rigor, and audit-driven environments, enabling them to contribute effectively within mission-critical programs.</p>
+ <p style="text-align: left; font-size:18px;">Globalpundits maintains U.S. government-recognized compliance credentials, including certification under the Department of Defense Joint Certification Program (JCP), aligned with regulated program requirements.</p>
+
+  <h2 class="acc-color" style="font-size:22px;"> Strategic Focus & Outlook</h2> 
+  <p style="text-align: left; font-size:18px;">As nuclear and regulated infrastructure programs continue to evolve, Globalpundits is deepening its focus on mission-critical and nuclear-aligned environments, including advanced and emerging reactor initiatives. We are also selectively expanding our international engagement, with active plans to support clients and partners in the Abu Dhabi region as regulatory frameworks, client needs, and program requirements align.</p>
+  <p style="text-align: left; font-size:18px;">Our approach to expansion remains deliberate and compliance-driven, prioritizing alignment with local regulations, client governance models, and the expectations of regulated energy and infrastructure programs.</p>
+          <!-- <div class="s-emp-block">
                             <ul>
-                                <li>ERP Professional Services including Oracle®, Banner®, Colleague® and Workday®</li>
-                                <li>Managed services for Oracle®, Banner®, Colleague® and Workday®</li>
-                                <li>Custom Software Development</li>
-                                <li>Technical & Professional Staff Augmentation</li>
-                                <li>IT Advisory Services</li>
+                                <li><b>Nuclear & SMR Engineering:</b> Supporting the design and deployment of traditional and Small Modular Reactors (SMRs).</li>
+                                <li><b>Defense IT & Cybersecurity:</b> Providing cleared talent and secure systems for national security initiatives.</li>
+                                <li><b>AI & Data Center Infrastructure:</b> Scaling the digital backbone for the next generation of artificial intelligence.</li>
+                                <li><b>Enterprise ERP Solutions:</b> Expert implementation and management for Oracle®, Ellucian Banner®, Colleague®, and Workday®.</li>
+                                <li><b>Higher Education Modernization:</b> Tailored digital transformation for leading global universities.</li>
+                         <li><b>Technical Staff Augmentation:</b>  Connecting elite technical professionals with the industries that need them most.</li>
                             </ul>
                         
                         </div>
-                        <p>With over 20 years of experience Globalpundits is uniquely qualified to partner with you for your ERP services and staffing needs. Globalpundits proven resources are comprised of an experienced base of solution experts with a proven methodology that enables us to support the most diverse solutions on a global basis.</p>
+                       <h1 class="acc-color">A Global Partner for a Changing World </h1>
+                        <p>Globalpundits is uniquely qualified to support diverse technical solutions on a global scale. We are proud to support major prime contractors and
+commercial giants in the <b>United States</b>, and we are excited to announce that we will soon be <b>fully operational in the United Arab Emirates and Saudi
+Arabia. </b>
+</p>
+ <p>By bridging the gap between North American technical standards and the visionary growth of the Middle East, we ensure our clients have the right people
+and the right technology to succeed, no matter the complexity of the mission.</b>
+</p> -->
                         <br>
                         <h3 class="acc-color">Globalpundits is guided by a set of core values that result in a superior client experience</h3>
                         <br>
@@ -82,25 +103,11 @@ include("header.html");
                                 <p>Execute with standard tools, methods, and processes.</p>
                             </div>
                         </div>
-
-                        <h3 class="acc-color">For our clients, who we are is reflected in a differentiating value proposition</h3>
-                        <div class="s-emp-block">
-                            <ul>
-                                <li>Full life-cycle services from strategy through managed services</li>
-                                <li>Extraordinary consulting talent and expertise</li>
-                                <li>Global reach and off-shore capabilities</li>
-                                <li>Standard project execution and quality</li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 actions-pane">
-            <?php
-                include("sidebar.html");
-            ?>
-        </div>
+
     </div>
 </div>
 <!-- content ends here -->
