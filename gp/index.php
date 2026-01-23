@@ -59,9 +59,7 @@
         <strong>Globalpundits is a U.S.-based, Minority-Owned Small Business</strong> providing engineering and technical consulting services, headquartered in Aiken, South Carolina. Founded in 2000, we support nuclear and mission-critical programs through high-assurance staffing and compliance-aligned program support, operating in environments where regulatory discipline, technical rigor, and execution integrity are fundamental.
     </p>
 
-    <a href="about.php" class="hero-btn solid-btn" style="margin-top:20%;">
-        Read More
-    </a>
+ <a href="about.php"><input style="margin-top:10px; padding: 10px;" type="button" value="Read More" class="solid-btn"></a>
 
 </div>
 
@@ -70,6 +68,7 @@
            
         </div>
     </div>
+
     <div id="pent-scene">
         <div data-depth="0.2" class="pent-container">
     <!--<video 
@@ -88,6 +87,7 @@
     </div>
 </div>
 
+
 <div id="section-2" class="container-fluid">
     <div data-sal="slide-up" data-sal-duration="500" class="container">
         <div class="row justify-content-center align-items-center rounded">
@@ -102,11 +102,17 @@
                 <h1>Who are we?</h1>
                 <p>Founded in 2000, Globalpundits is uniquely qualified to partner with you for your ERP services and staffing needs. Globalpundits proven resources are comprised of an experienced base of solution experts with a proven methodology that enables us to support the most diverse solutions on a global basis.</p>
                 <a href="about.php"><input class="outline-btn-orange" type="button" value="Read more" /></a>
-            </div> -->
+            </div>-->
         </div>
         <br><br>
     </div>
 </div>
+
+
+<!--<a href="about.php" class="full-banner-link">
+    <img src="images/Referralprogram.jpg" class="img-fluid w-100" alt="">
+</a>-->
+
 
 <div id="section-3" class="container-fluid">
     <div id="services-container" class="container">
@@ -389,10 +395,7 @@
     </div>
 
 </div>
-
-
-
-            </div>
+</div>
        
     </div>
     <br><br>
