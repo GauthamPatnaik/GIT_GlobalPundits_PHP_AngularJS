@@ -56,9 +56,21 @@ include("header.html");
                                 <p><strong><i class="material-icons">directions</i></strong>&nbsp;  8th Floor, Plot No. 1-118/1/14/C, DHFLVC Silicon Towers, Kondapur, Hyderabad, Telangana INDIA 500084</p>
                                 <hr>
                                 <h3 class="acc-color">Reach Us</h3>
-                                <p><strong><i class="material-icons">local_phone</i></strong>&nbsp; (803) 354-9400</p>
-                                <p><strong><i class="material-icons">local_printshop</i></strong>&nbsp; (803) 996-1055</p>
-                                <p><strong><i class="material-icons">email</i></strong>&nbsp;  info@globalpundits.com</p>
+                             <p>
+  <strong><i class="material-icons">local_phone</i></strong>&nbsp;
+  <a href="tel:+18033549400">(803) 354-9400</a>
+</p>
+
+<p>
+  <strong><i class="material-icons">local_printshop</i></strong>&nbsp;
+  <a href="tel:+18039961055">(803) 996-1055</a>
+</p>
+
+<p>
+  <strong><i class="material-icons">email</i></strong>&nbsp;
+  <a href="mailto:info@globalpundits.com">info@globalpundits.com</a>
+</p>
+
                                 <br><hr><br>
                         
                             </div>
