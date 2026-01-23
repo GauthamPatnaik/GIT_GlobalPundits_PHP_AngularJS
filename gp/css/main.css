@@ -47,6 +47,7 @@ a {
 *:focus {
     outline: none;
 }
+
 #hamburger {
     display: none;
 }
@@ -307,8 +308,8 @@ input[type='button'] {
     overflow: hidden;
 }
 #landing-info {
-    opacity: 0;
-    margin-left: -500px;
+    opacity: 1 !important;
+    margin-left: 0 !important;
     max-width: 100%;
 }
 #pent-scene {
@@ -768,6 +769,16 @@ div:hover>h3::after {
     width: fit-content;
     padding: 10px 24px;
     margin-top: 50px;
+}
+
+.hero-btn, .hero-text-wrapper, #landing-info {
+    position: relative !important;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+}
+
+#pent-scene, #pent-scene .pent-container, #pent-scene .pentagon {
+    pointer-events: none !important;
 }
 
 /* ------------------ Responsive ------------------ */

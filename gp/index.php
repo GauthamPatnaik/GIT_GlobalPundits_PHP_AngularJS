@@ -36,6 +36,7 @@
     }
 </style>
 
+
 <?php
     include "header.html";
 ?>
@@ -49,38 +50,21 @@
                 data-scalar-x="10"
                 data-scalar-y="10">
 
-<div class="hero-text-wrapper">
-
-    <h3 class="hero-heading">
-        Engineering and technical support for DOE, DoD, and NNSA-aligned programs across nuclear (including SMRs), defense, and national security–critical industries.
-    </h3>
-
-    <p class="hero-description">
-        <strong>Globalpundits is a U.S.-based, Minority-Owned Small Business</strong> providing engineering and technical consulting services, headquartered in Aiken, South Carolina. Founded in 2000, we support nuclear and mission-critical programs through high-assurance staffing and compliance-aligned program support, operating in environments where regulatory discipline, technical rigor, and execution integrity are fundamental.
-    </p>
-
- <a href="about.php"><input style="margin-top:10px; padding: 10px;" type="button" value="Read More" class="solid-btn"></a>
-
-</div>
-
-
-            </div>
-           
+                <div class="hero-text-wrapper" id="landing-info">
+                    <h3 class="hero-heading">
+                        Engineering and technical support for DOE, DoD, and NNSA-aligned programs across nuclear (including SMRs), defense, and national security–critical industries.
+                    </h3>
+                    <p class="hero-description">
+                        <strong>Globalpundits is a U.S.-based, Minority-Owned Small Business</strong> providing engineering and technical consulting services, headquartered in Aiken, South Carolina. Founded in 2000, we support nuclear and mission-critical programs through high-assurance staffing and compliance-aligned program support, operating in environments where regulatory discipline, technical rigor, and execution integrity are fundamental.
+                    </p>
+                    <a href="/about.php" class="hero-btn solid-btn" style="margin-top:20%;">Read More</a>                   
+                </div>
+            </div>           
         </div>
     </div>
 
     <div id="pent-scene">
         <div data-depth="0.2" class="pent-container">
-    <!--<video 
-        autoplay
-        loop
-        muted
-        playsinline
-        class="pentagon-video">
-        
-        <source src="images/globalpundits-bg-video.mp4" type="video/mp4">
-    </video>-->
-
         <img src="images/pentagon.png" alt="" class="pentagon" style="width:25%;" id="pentagon-1"></div>
         <div data-depth="0.6" class="pent-container"><img src="images/pentagon.png" alt="" class="pentagon" id="pentagon-2"></div>
         <div data-depth="0.6" class="pent-container"><img src="images/pentagon.png" alt="" class="pentagon" id="pentagon-3"></div>
