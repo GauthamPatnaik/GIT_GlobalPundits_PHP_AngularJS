@@ -77,7 +77,7 @@ include("header.html");
                             <div class="col-lg">
                              <br>
                                 <h3 class="acc-color">Leave a message</h3>
-                                <p class="help_text">We generally are quick repliers, we will get back to you</p>
+                                <p class="help_text">We typically reply quickly and will get back to you soon.</p>
 
                                 <form name="c_form" ng-submit="submitForm()">
                                   <label for="contact_name">Your Name</label>

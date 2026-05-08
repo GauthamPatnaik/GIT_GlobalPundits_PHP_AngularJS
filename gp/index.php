@@ -107,7 +107,7 @@
 
 				<div class="row justify-content-center align-items-top services-blocks">
 					<div class="col-lg-3 section-3-img-block1">
-						<img src="images/Nuclear.jpeg" alt=" Technical & Professional Staffing">
+						<img src="images/Nuclear and regulated energy.jpeg" alt=" Technical & Professional Staffing">
 					</div>
 					<div class="col-lg-9">
 						<p style="text-align: left; font-size: 14px;">Globalpundits supports nuclear and regulated energy programs by supplying experienced engineering and technical professionals who operate effectively within highly controlled, compliance-driven environments. Our teams have supported U.S. Department of Energy (DOE)–regulated programs and DOE/NRC-aligned nuclear initiatives, contributing to engineering, licensing, quality assurance, and program execution activities where safety, documentation, and regulatory discipline are paramount.</p>
@@ -117,7 +117,7 @@
 
 				<div class="row justify-content-center align-items-top services-blocks">
 					<div class="col-lg-3 section-3-img-block1">
-						<img src="images/ai.jpeg" alt="Defense IT & Cybersecurity">
+						<img src="images/AI data centers and digital infrastructure.jpeg" alt="Defense IT & Cybersecurity">
 					</div>
 					<div class="col-lg-9">
 						<p style="text-align: left;font-size: 14px;">Globalpundits supports AI data center and digital infrastructure programs by providing engineering and IT talent experienced in large-scale, mission-critical environments where power reliability, system integration, and operational continuity are essential. Our support spans energy-adjacent engineering, infrastructure systems, and enterprise IT roles that underpin high-density computing and AI-enabled platforms.</b>
@@ -128,7 +128,7 @@
 
 				<div class="row justify-content-center align-items-top services-blocks">
 					<div class="col-lg-3 section-3-img-block1">
-						<img src="images/defense.jpeg" alt=" Nuclear & Energy Engineering">
+						<img src="images/Defense government and secure IT systems.jpeg" alt=" Nuclear & Energy Engineering">
 					</div>
 					<div class="col-lg-9">
 						<p style="text-align: left;font-size: 14px;">Globalpundits provides technical staffing and consulting support for defense, government, and secure IT systems operating under DoD-aligned and federally regulated frameworks. Our professionals support enterprise IT platforms, digital modernization initiatives, and mission systems that require structured processes, compliance awareness, and secure operational practices.</p>
@@ -138,7 +138,7 @@
 
 				<div class="row justify-content-center align-items-top services-blocks">
 					<div class="col-lg-3 section-3-img-block1" >
-						<img src="images/higher education.jpeg" alt="Data Centers & AI Support">
+						<img src="images/Higher education and university systems.jpeg" alt="Data Centers & AI Support">
 					</div>
 					<div class="col-lg-9">
 						<p style="text-align: left;font-size: 14px;">Globalpundits provides specialized ERP and enterprise systems consulting for higher education institutions, including state universities, technical colleges, and Ivy League schools. We support the implementation, upgrades, optimization, and sustainment of platforms such as Oracle ERP, Workday, and Banner, supplying experienced professionals who integrate directly within campus IT and administrative teams. From core financials and HR systems to large-scale modernization initiatives, Globalpundits delivers disciplined, systems-focused talent to ensure operational continuity, data integrity, and long-term platform stability.</p></div>
@@ -146,7 +146,7 @@
 
                 <div class="row justify-content-center align-items-top services-blocks">
 					<div class="col-lg-3 section-3-img-block1" >
-						<img src="images/staffing.jpeg" alt="Higher Education & University Systems">
+						<img src="images/Technical and professional staffing.jpeg" alt="Higher Education & University Systems">
 					</div>
 					<div class="col-lg-9">
 						<p style="text-align: left;font-size: 14px;">Globalpundits delivers technical and professional staffing through flexible, program-aligned engagement models designed for regulated and mission-critical environments. Our approach emphasizes embedded support, where professionals integrate directly into client and prime contractor teams to provide continuity, domain expertise, and long-term value.</p>
@@ -172,7 +172,7 @@
         <span id="mobile-services-block">
         <div data-sal="slide-up" data-sal-duration="500" class="row justify-content-center align-items-center">
             <div class="col-lg-3 section-3-img-block">
-                <img src="images/Nuclear.jpeg" alt="Technical & Professional Staffing">
+                <img src="images/Nuclear_and_regulated_energy.jpeg" alt="Technical & Professional Staffing">
             </div>
             <div class="col-lg-8">
                 <h2>Nuclear & Regulated Energy</h2>
@@ -415,7 +415,7 @@
             </div>
             <div data-sal="slide-up" data-sal-duration="500" data-sal-delay="100" class="col-lg-3">
                  <h3>Global Excellence, Local Expertise</h3>
-                 <p style="font-size:16px;">We bridge the gap between North American technical rigor and the visionary growth of the Middle East. Our value lies in our ability to deliver worldclass ERP and IT expertise while respecting and supporting the local goals of the regions where we operate.</p>
+                 <p style="font-size:16px;">We bridge the gap between North American technical rigor and the visionary growth of the Middle East. Our value lies in our ability to deliver world-class ERP and IT expertise while respecting and supporting the local goals of the regions where we operate.</p>
             </div>
             <div data-sal="slide-up" data-sal-duration="500" data-sal-delay="100" class="col-lg-3">
                 <h3>Commitment to People</h3>
@@ -429,11 +429,11 @@
                 <h3>What our clients say about us</h3>
                 <br>
                 <div class="slider">
-                    <div class="test-slides">“ I find that Globalpundits representatives were friendly, and thorough in their approach with a genuine desire to help us find the right solution </div>
-                    <div class="test-slides">“ Your candidate is a slam dunk, highly motivated and possessing all the skills we need in Project Management, Engineering and Energy Management, could fit in any of the three groups ”</div>
-                    <div class="test-slides">“ Globalpundits is one our top suppliers, both in terms of headcount and in terms of responsiveness. They provide quality candidates for our openings and really listen to our needs and the needs of their contractors ”</div>
-                    <div class="test-slides">“ Globalpundits found the right candidate with the right skill set very quickly. Thanks for the great match! ”</div>
-                    <div class="test-slides">“ Through the guidance and leadership of Globalpundits, I was placed at a company that values the opinions of their employees and allows me the opportunity to gain experience in areas that will further enhance my long term career goals! ”</div>
+                    <div class="test-slides">“I find that Globalpundits representatives are friendly and thorough in their approach, with a genuine desire to help us find the right solution.”</div>
+                    <div class="test-slides">“Your candidate is a slam dunk — highly motivated and possessing all the skills we need in Project Management, Engineering, and Energy Management. He could fit in any of the three groups.”</div>
+                    <div class="test-slides">“Globalpundits is one of our top suppliers, both in terms of headcount and in terms of responsiveness. They provide quality candidates for our openings and really listen to our needs and the needs of their contractors.”</div>
+                    <div class="test-slides">“Globalpundits found the right candidate with the right skill set very quickly. Thanks for the great match!”</div>
+                    <div class="test-slides">“Through the guidance and leadership of Globalpundits, I was placed at a company that values the opinions of its employees and gives me the opportunity to gain experience in areas that will further enhance my long-term career goals.”</div>
                 </div>
             </div>
         </div>

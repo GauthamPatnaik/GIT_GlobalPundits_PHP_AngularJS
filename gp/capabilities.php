@@ -56,10 +56,10 @@ include("header.html");
 </h2>
 <p style="font-size:18px;">Quality and compliance are embedded into our delivery approach across every program we support. We place professionals experienced in quality assurance, independent verification and validation (IV&V), and compliance-driven environments where adherence to standards is non-negotiable.
 </p>
-<p style="font-size:18px;">As a DoD JCP-certified organization with deep experience supporting DOE-regulated programs, we align naturally with structured quality systems and audit expectations—helping clients and prime contractors maintain program integrity, regulatory confidence, and long-term operational success.
+<p style="font-size:18px;">As a DoD JCP-certified organization with deep experience supporting DOE-regulated programs, we align naturally with structured quality systems and audit expectations — helping clients and prime contractors maintain program integrity, regulatory confidence, and long-term operational success.
 </p>
  
- <h2 class="acc-color"  style="font-size:22px;">NAIC CODES
+ <h2 class="acc-color"  style="font-size:22px;">NAICS Codes
 
 </h2>
   <ul style="font-size:18px;">
